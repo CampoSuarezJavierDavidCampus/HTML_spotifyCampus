@@ -1,0 +1,7 @@
+@mixin varsCreate($prefix,$newVars){
+    :root{
+        @each $varName, $varValue in $newVars{
+            --#{$prefix}-#{$varName}: #{$varValue};
+        }
+    }    
+}
