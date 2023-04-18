@@ -1,4 +1,5 @@
 @use '../custom' as bootstrap;
+
 @include bootstrap.media-breakpoint-down('md'){
     body{
         grid-template-areas: 

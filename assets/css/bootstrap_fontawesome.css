@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* GET CLASES */
 /*=============================================
 =            ADD YOUR CUSTOM PROPERTIES       =
 =============================================*/
@@ -25158,35 +25157,8 @@ readers do not read off random characters that represent icons */
 }
 
 /*=====  End of 8. Add additional custom code here  ======*/
-*, *::after, *::before {
-  box-sizing: inherit;
-}
-
-body {
-  box-sizing: border-box;
-  width: 100vw;
-  min-height: 100vh;
-  display: grid;
-  grid-template-areas: "aside header header header" "aside main main main" "aside main main main" "aside main main main" "aside main main main" "aside footer footer footer";
-  overflow-x: hidden;
-  grid-template-rows: auto repeat(4,1fr) auto;
-}
-
-.spotify-header {
-  grid-area: header;
-}
-.spotify-main {
-  grid-area: main;
-}
-.spotify-footer {
-  grid-area: footer;
-}
-.spotify-aside {
-  grid-area: aside;
-}
-
 @media (max-width: 767.98px) {
   body {
     grid-template-areas: "header header header header" "main main main main" "main main main main" "main main main main" "main main main main" "footer footer footer footer";
   }
-}/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=bootstrap_fontawesome.css.map */

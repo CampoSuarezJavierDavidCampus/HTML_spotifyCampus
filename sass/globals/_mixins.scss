@@ -1,6 +1,0 @@
-/* GET CLASES */
-@mixin b5-getClases($clases...){    
-    @each $class in $clases{
-        @extend .#{$class};
-    }
-}
