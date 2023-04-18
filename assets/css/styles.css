@@ -25169,6 +25169,7 @@ body {
   display: grid;
   grid-template-areas: "aside header header header" "aside main main main" "aside main main main" "aside main main main" "aside main main main" "aside footer footer footer";
   overflow-x: hidden;
+  grid-template-rows: auto repeat(4,1fr) auto;
 }
 
 .spotify-header {
