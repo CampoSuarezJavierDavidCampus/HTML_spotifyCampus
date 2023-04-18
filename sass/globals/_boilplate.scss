@@ -24,3 +24,24 @@ body{
     &-footer{grid-area: footer}
     &-aside{grid-area: aside}
 }
+
+
+
+/*----------  MAIN GLOBALS  ----------*/
+.spotify-main__cards{    
+    &-card{
+        width: 11.7rem;
+        height: 11.7rem;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        position: relative;
+        &-img-small{
+            height: 6.25rem;
+            width: 6.25rem;
+            position: absolute;
+            right: -1.2rem;
+            bottom: -.2rem;
+            transform: rotate(25deg);
+        }
+    }
+}
