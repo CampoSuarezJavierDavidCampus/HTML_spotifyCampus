@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap_fontawesome.css">
+    <link rel="stylesheet" href="../assets/css/spotify-sections.css">
+    <script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+</head>
+<body>
+    <header class="spotify-header navbar py-3 bg-black px-4 row  w-100 p-0 m-0 justify-content-between align-items-center">
+            <a href="#" class="spotify-header-navbar__brand navbar-brand d-none d-sm-inline d-md-none fs-1 text-white border-end border-2 pe-4">
+                <i class="spotify-header-navbar__brand-icon fa-brands fa-spotify "></i> 
+                <span class="spotify-header-navbar__brand-text d-none d-md-inline fw-semibold">spotify</span>
+            </a>
+            <nav aria-label="Page navigation" class="spotify-header-navbar__navegation d-none d-md-block p-0 px-1 m-0" >
+                <ul class="spotify-header-navbar__navegation-pagination pagination m-0">
+                    <li class="spotify-header-navbar__navegation-pagination-page-item page-item">
+                        <a class="spotify-header-navbar__navegation-pagination-page-link page-link rounded-end rounded-4 bg-dark text-white px-4 py-2 border-0 mx-1" href="#">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </a>
+                    </li>
+                    <li class="spotify-header-navbar__navegation-pagination-page-item page-item">
+                        <a class="spotify-header-navbar__navegation-pagination-page-link page-link rounded-start rounded-4 bg-dark text-white px-4 py-2 border-0 mx-1" href="#">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                </ul>
+              </nav>
+            <form class="spotify-header-navbar__form col">
+                <label class="spotify-header-navbar__form-input-group input-group ">
+                    <span class="spotify-header-navbar__form-input-group-text input-group-text rounded-start-4 bg-white border-0">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input type="text" class="spotify-header-navbar__form-input-group-form-control form-control border-0 rounded-end-4 fw-bold py-2" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </label>
+            </form>
+            <nav class="spotify-header-navbar__nav col-md-8 col-xl-6 ">
+                <ul class="spotify-header-navbar__nav-list nav d-flex justify-content-evenly align-items-center">
+                    <li class="spotify-header-navbar__nav-list-item spotify-header-navbar__nav-list-item--link nav-item px-0 py-2 fs-5 text-capitalize ">
+                        <a href="#" class="spotify-header-navbar__nav-list-link">premium</a>
+                    </li>
+                    <li class="spotify-header-navbar__nav-list-item spotify-header-navbar__nav-list-item--link nav-item px-0 py-2 fs-5 text-capitalize ">
+                        <a href="#" class="spotify-header-navbar__nav-list-link">support</a>
+                    </li>
+                    <li class="spotify-header-navbar__nav-list-item spotify-header-navbar__nav-list-item--link nav-item px-0 py-2 fs-5 text-capitalize ">
+                        <a href="#" class="spotify-header-navbar__nav-list-link">download</a>
+                    </li>
+                    <li class="spotify-header-navbar__nav-list-item nav-item px-0  mx-2 border-start border-2 border-white ps-2 ">
+                        <button class="spotify-header-navbar__nav-list-button btn btn-lg btn-primary w-100">Log in</button>
+                    </li>
+                    <li class="spotify-header-navbar__nav-list-item nav-item px-0 ">
+                        <button class="spotify-header-navbar__nav-list-button btn btn-lg rounded-pill btn-light w-100">Sign up</button>
+                    </li>
+                </ul>
+            </nav>                 
+    </header>
+    <main class="spotify-main">
+        <section class="spotify-main-browser bg-dark">
+            <article class="spotify-main-browser__cards">
+                <div class="card" style="width: 18rem;">
+                   <img class="" src="https://i.scdn.co/image/567158eb895ad26718a814345af0fc43ee785ec5" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Podcast</h5>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <aside class="spotify-aside"></aside>
+    <footer class="spotify-footer"></footer>
+</body>
+</html>
