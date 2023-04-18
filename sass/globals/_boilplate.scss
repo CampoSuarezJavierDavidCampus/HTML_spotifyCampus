@@ -1,0 +1,26 @@
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+
+body{
+    box-sizing: border-box;
+    width: 100vw;    
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        "aside header header header"
+        "aside main main main"
+        "aside main main main"
+        "aside main main main"
+        "aside main main main"
+        "aside footer footer footer"
+    ;
+    overflow-x: hidden;       
+}
+
+.spotify{
+    &-header{grid-area: header}
+    &-main{grid-area: main}
+    &-footer{grid-area: footer}
+    &-aside{grid-area: aside}
+}
