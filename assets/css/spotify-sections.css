@@ -67,6 +67,30 @@ body {
 .spotify-main__cards-card--fit:hover {
   background: var(--spotify-gray-card-active);
 }
+.spotify-main__cards-card--fit:hover figure figcaption {
+  opacity: 1;
+  bottom: 0.4rem;
+}
+.spotify-main__cards-card-figure {
+  overflow-y: hidden;
+  position: relative;
+}
+.spotify-main__cards-card-figure-caption {
+  position: absolute;
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bs-primary);
+  right: 0.4rem;
+  bottom: -3.2rem;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.spotify-main__cards-card-figure-caption:hover {
+  transform: scale(1.1);
+}
 .spotify-main__cards-card-img-small {
   height: 6.25rem;
   width: 6.25rem;
@@ -78,6 +102,9 @@ body {
 .spotify-main__cards-card-img-fit {
   height: 9.25rem;
   width: 9.25rem;
+}
+.spotify-main__cards-card-img-fit--shadow {
+  box-shadow: 0 0 0.9rem 0.2rem rgba(0, 0, 0, 0.8);
 }
 .spotify-main__cards-card-body-author {
   font-size: 1rem;
@@ -95,6 +122,45 @@ body {
 }
 .spotify-main__section-title-link--small:hover {
   text-decoration: underline;
+}
+.spotify-main-footer__categorias {
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(3, 1fr);
+}
+.spotify-main-footer__categorias-item--start {
+  grid-column-start: 1;
+}
+.spotify-main-footer__categorias-item--end {
+  grid-column-start: 3;
+}
+.spotify-main-footer__categorias-item--middle {
+  grid-column-start: 2;
+}
+.spotify-main-footer__categorias-item-link {
+  color: var(--spotify-gray-text);
+  text-decoration: none;
+}
+.spotify-main-footer__categorias-item-link:hover {
+  color: var(--bs-white);
+}
+.spotify-main-footer__redes {
+  list-style: none;
+}
+.spotify-main-footer__redes-item {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bs-white);
+}
+.spotify-main-footer__redes-item:hover {
+  background: var(--spotify-gray-text);
+}
+.spotify-main-footer__copyright {
+  color: var(--spotify-gray-text);
+  border-top: 0.05rem solid var(--spotify-gray-text);
+  font-size: 0.95rem;
 }
 .spotify-main-browser, .spotify-main-top {
   background: var(--spotify-gray-main);
