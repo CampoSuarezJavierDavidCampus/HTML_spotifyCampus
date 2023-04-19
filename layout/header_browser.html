@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap_fontawesome.css">
+    <link rel="stylesheet" href="../assets/css/spotify-sections.css">
+    
+    <script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+</head>
+<body>
+    <header class="spotify-header navbar py-3 bg-black px-4 row  w-100 p-0 m-0 justify-content-between align-items-center">
+            <a href="#" class="spotify-header-navbar__brand navbar-brand d-none d-sm-inline d-md-none fs-1 text-white border-end border-2 pe-4">
+                <i class="spotify-header-navbar__brand-icon fa-brands fa-spotify "></i> 
+                <span class="spotify-header-navbar__brand-text d-none d-md-inline fw-semibold">spotify</span>
+            </a>
+            <nav aria-label="Page navigation" class="spotify-header-navbar__navegation d-none d-lg-block p-0 px-1 m-0" >
+                <ul class="spotify-header-navbar__navegation-pagination pagination m-0">
+                    <li class="spotify-header-navbar__navegation-pagination-page-item page-item">
+                        <a class="spotify-header-navbar__navegation-pagination-page-link page-link rounded-end rounded-5 bg-dark text-white px-4 py-2 border-0 mx-1" href="#">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </a>
+                    </li>
+                    <li class="spotify-header-navbar__navegation-pagination-page-item page-item">
+                        <a class="spotify-header-navbar__navegation-pagination-page-link page-link rounded-start rounded-5 bg-dark text-white px-4 py-2 border-0 mx-1" href="#">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </li>
+                </ul>
+              </nav>
+            <form class="spotify-header-navbar__form col">
+                <label class="spotify-header-navbar__form-input-group input-group ">
+                    <span class="spotify-header-navbar__form-input-group-text input-group-text rounded-start-4 bg-white border-0">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input type="text" class="spotify-header-navbar__form-input-group-form-control form-control border-0 rounded-end-4 py-2" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </label>
+            </form>
+            <nav class="spotify-header-navbar__nav col-md-8 col-xl-6 d-none d-lg-block">
+                <ul class="spotify-header-navbar__nav-list nav d-flex justify-content-evenly align-items-center">
+                    <li class="spotify-header-navbar__nav-list-item spotify-header-navbar__nav-list-item--link nav-item px-0 py-2 fs-5 text-capitalize ">
+                        <a href="#" class="spotify-header-navbar__nav-list-link">premium</a>
+                    </li>
+                    <li class="spotify-header-navbar__nav-list-item spotify-header-navbar__nav-list-item--link nav-item px-0 py-2 fs-5 text-capitalize ">
+                        <a href="#" class="spotify-header-navbar__nav-list-link">support</a>
+                    </li>
+                    <li class="spotify-header-navbar__nav-list-item spotify-header-navbar__nav-list-item--link nav-item px-0 py-2 fs-5 text-capitalize ">
+                        <a href="#" class="spotify-header-navbar__nav-list-link">download</a>
+                    </li>
+                    <li class="spotify-header-navbar__nav-list-item spotify-header-navbar__nav-list-item--btn-group btn-group-lg btn-group nav-item px-0  mx-2 border-start border-2 border-white ps-2 rounded-0 ">
+                        <button class="spotify-header-navbar__nav-list-button btn btn-primary rounded-3 mx-2">Log in</button>
+                        <button class="spotify-header-navbar__nav-list-button  btn rounded-pill btn-light mx-2">Sign up</button>
+                    </li>
+                </ul>
+            </nav>                 
+    </header>
+    <main class="spotify-main">
+        <section class="spotify-main-browser p-4 row gy-5">
+            <article class="spotify-main__section">
+                <h3 class="spotify-main__section-title text-white fw-bold fs-3 text-capitalize">
+                    Podcasts mas escuchados
+                    <a class="spotify-main__section-title-link--small px-4 text-white fw-light fs-4" href="#">Mostrar todo</a>
+                </h3>
+                <div class="spotify-main__cards spotify-main__cards--fit ">
+                    <div class="spotify-main__cards-card card spotify-main__cards-card--fit rounded-3 m-2 py-3  border-0">
+                        
+                            <img class="spotify-main__cards-card-img-fit" src="https://i.scdn.co/image/ab67656300005f1f1f6fddcfa5767d816721ffa5" alt="card imagen">
+                            <figcaption class="spotify-main__cards-card-figure-caption rounded-pill">
+                                <i class="fa-solid fa-play"></i>
+                            </figcaption>
+                        
+                         <div class="spotify-main__cards-card-body card-body px-0">
+                            <h5 class="spotify-main__cards-card-body-title card-title fs-6 fw-bold m-0 text-white text-capitalize">meterse al rancho</h5>
+                            <p class="spotify-main__cards-card-body-author fw-semibold text-capitalize">Spotify studio</p>
+                        </div>
+                    </div>
+                    <div class="spotify-main__cards-card card spotify-main__cards-card--fit rounded-3 m-1 py-3  border-0">
+                       
+                            <img class="spotify-main__cards-card-img-fit" src="https://i.scdn.co/image/ab67656300005f1f74631700e0a884f6b774ff83" alt="card imagen">
+                            <figcaption class="spotify-main__cards-card-figure-caption rounded-pill">
+                                <i class="fa-solid fa-play"></i>
+                            </figcaption>
+                      
+                         <div class="spotify-main__cards-card-body card-body px-0">
+                            <h5 class="spotify-main__cards-card-body-title card-title fs-6 fw-bold m-0 text-white text-capitalize">La Joya de la Corona</h5>
+                            <p class="spotify-main__cards-card-body-author fw-semibold text-capitalize">Marcela Garcia Caballero</p>
+                        </div>
+                    </div>
+                    <div class="spotify-main__cards-card card spotify-main__cards-card--fit rounded-3 m-1 py-3  border-0">
+                       
+                            <img class="spotify-main__cards-card-img-fit" src="https://i.scdn.co/image/ab67656300005f1f44a433aae975e19343ca6628" alt="card imagen">
+                            <figcaption class="spotify-main__cards-card-figure-caption rounded-pill">
+                                <i class="fa-solid fa-play"></i>
+                            </figcaption>
+                        
+                         <div class="spotify-main__cards-card-body card-body px-0">
+                            <h5 class="spotify-main__cards-card-body-title card-title fs-6 fw-bold m-0 text-white text-capitalize">OurPodcast by Jose y c</h5>
+                            <p class="spotify-main__cards-card-body-author fw-semibold text-capitalize">OurDalilyLives</p>
+                        </div>
+                    </div>
+                    <div class="spotify-main__cards-card card spotify-main__cards-card--fit rounded-3 m-1 py-3  border-0">
+                       
+                            <img class="spotify-main__cards-card-img-fit" src="https://i.scdn.co/image/ab67656300005f1f5840814a1c95e313ac7d0b3f" alt="card imagen">
+                            <figcaption class="spotify-main__cards-card-figure-caption rounded-pill">
+                                <i class="fa-solid fa-play"></i>
+                            </figcaption>
+                        
+                         <div class="spotify-main__cards-card-body card-body px-0">
+                            <h5 class="spotify-main__cards-card-body-title card-title fs-6 fw-bold m-0 text-white text-capitalize">OurPodcast by Jose y c</h5>
+                            <p class="spotify-main__cards-card-body-author fw-semibold text-capitalize">OurDalilyLives</p>
+                        </div>
+                    </div>
+                    <div class="spotify-main__cards-card card spotify-main__cards-card--fit rounded-3 m-1 py-3  border-0">
+                       
+                            <img class="spotify-main__cards-card-img-fit" src="https://i.scdn.co/image/ab67656300005f1f3a3c35793a3da90570944712" alt="card imagen">
+                            <figcaption class="spotify-main__cards-card-figure-caption rounded-pill">
+                                <i class="fa-solid fa-play"></i>
+                            </figcaption>
+                        
+                         <div class="spotify-main__cards-card-body card-body px-0">
+                            <h5 class="spotify-main__cards-card-body-title card-title fs-6 fw-bold m-0 text-white text-capitalize">OurPodcast by Jose y c</h5>
+                            <p class="spotify-main__cards-card-body-author fw-semibold text-capitalize">OurDalilyLives</p>
+                        </div>
+                    </div>
+                    <div class="spotify-main__cards-card card spotify-main__cards-card--fit rounded-3 m-1 py-3  border-0">
+                       
+                            <img class="spotify-main__cards-card-img-fit" src="https://i.scdn.co/image/ab67656300005f1f4ceb8e510f5bd8591fcf6f73" alt="card imagen">
+                            <figcaption class="spotify-main__cards-card-figure-caption rounded-pill">
+                                <i class="fa-solid fa-play"></i>
+                            </figcaption>
+                        
+                         <div class="spotify-main__cards-card-body card-body px-0">
+                            <h5 class="spotify-main__cards-card-body-title card-title fs-6 fw-bold m-0 text-white text-capitalize">OurPodcast by Jose y c</h5>
+                            <p class="spotify-main__cards-card-body-author fw-semibold text-capitalize">OurDalilyLives</p>
+                        </div>
+                    </div>                              
+                    <!-- https://i.scdn.co/image/ab67656300005f1f7d593dd55e85f9724c9c6925 -->
+                </div>             
+            </article>
+            <article class="spotify-main__section">
+                <h3 class="spotify-main__section-title text-white fw-bold fs-3 text-capitalize">
+                   Hablemos de amor y relaciones 
+                   <a class="spotify-main__section-title-link--small px-4 text-white fw-light fs-4" href="#">Mostrar todo</a>
+                </h3>
+                <div class="spotify-main__cards spotify-main__cards--fit ">
+                    <div class="spotify-main__cards-card card spotify-main__cards-card--fit rounded-3 m-2 py-3  border-0">
+                        <img class="spotify-main__cards-card-img-fit" src="https://i.scdn.co/image/ab67656300005f1f867ad98355f973869d9176c6" alt="card imagen">
+                         <div class="spotify-main__cards-card-body card-body px-0">
+                            <h5 class="spotify-main__cards-card-body-title card-title fs-6 fw-bold m-0 text-white text-capitalize">Cita a Ciegas</h5>
+                            <p class="spotify-main__cards-card-body-author fw-semibold text-capitalize">Spotify Studios</p>
+                        </div>
+                    </div> 
+                    <div class="spotify-main__cards-card card spotify-main__cards-card--fit rounded-3 m-2 py-3  border-0">
+                        <img class="spotify-main__cards-card-img-fit" src="https://i.scdn.co/image/ab67656300005f1f7d593dd55e85f9724c9c6925" alt="card imagen">
+                         <div class="spotify-main__cards-card-body card-body px-0">
+                            <h5 class="spotify-main__cards-card-body-title card-title fs-6 fw-bold m-0 text-white text-capitalize">A Calzon Quitado'o|pi...</h5>
+                            <p class="spotify-main__cards-card-body-author fw-semibold text-capitalize">PIA Podcasts</p>
+                        </div>
+                    </div> 
+                    <div class="spotify-main__cards-card card spotify-main__cards-card--fit rounded-3 m-2 py-3  border-0">
+                        <img class="spotify-main__cards-card-img-fit" src="https://i.scdn.co/image/ab67656300005f1f3c957b9ba656a56ffa719409" alt="card imagen">
+                         <div class="spotify-main__cards-card-body card-body px-0">
+                            <h5 class="spotify-main__cards-card-body-title card-title fs-6 fw-bold m-0 text-white text-capitalize">Te para tres - Podcast</h5>
+                            <p class="spotify-main__cards-card-body-author fw-semibold text-capitalize">Teparatres-Podcast</p>
+                        </div>
+                    </div> 
+                    <div class="spotify-main__cards-card card spotify-main__cards-card--fit rounded-3 m-2 py-3  border-0">
+                        <img class="spotify-main__cards-card-img-fit" src="https://i.scdn.co/image/1dab55ec6f85c3e2bdbdb0bd9fea85072c838f83" alt="card imagen">
+                         <div class="spotify-main__cards-card-body card-body px-0">
+                            <h5 class="spotify-main__cards-card-body-title card-title fs-6 fw-bold m-0 text-white text-capitalize">Sexo en tu oido</h5>
+                            <p class="spotify-main__cards-card-body-author fw-semibold text-capitalize">Podcast EL TIEMPO</p>
+                        </div>
+                    </div> 
+                    <div class="spotify-main__cards-card card spotify-main__cards-card--fit rounded-3 m-2 py-3  border-0">
+                        <img class="spotify-main__cards-card-img-fit" src="https://i.scdn.co/image/a859a98df7aa74e8a434b603877fb5a3c05c9300" alt="card imagen">
+                         <div class="spotify-main__cards-card-body card-body px-0">
+                            <h5 class="spotify-main__cards-card-body-title card-title fs-6 fw-bold m-0 text-white text-capitalize">Echemos Rudo|PIA</h5>
+                            <p class="spotify-main__cards-card-body-author fw-semibold text-capitalize">PIA Podcast</p>
+                        </div>
+                    </div> 
+                    <div class="spotify-main__cards-card card spotify-main__cards-card--fit rounded-3 m-2 py-3  border-0">
+                        <img class="spotify-main__cards-card-img-fit" src="https://i.scdn.co/image/ab67656300005f1fbd685ce786abc2c8e0e97b8d" alt="card imagen">
+                         <div class="spotify-main__cards-card-body card-body px-0">
+                            <h5 class="spotify-main__cards-card-body-title card-title fs-6 fw-bold m-0 text-white text-capitalize">SINVALENTIN</h5>
+                            <p class="spotify-main__cards-card-body-author fw-semibold text-capitalize">Gustavo Galeano</p>
+                        </div>
+                    </div> 
+
+                </div>
+                
+                    
+            
+                             
+            </article>
+            <article class="spotify-main__section">
+                <h3 class="spotify-main__section-title text-white fw-bold fs-3 text-capitalize">
+                    Categorias
+                    <a class="spotify-main__section-title-link--small px-4 text-white fw-light fs-4" href="#">Mostrar todo</a>
+                </h3>
+                <div class="spotify-main__cards spotify-main__cards--fit ">
+                    <div class="spotify-main__cards-card card spotify-main__cards-card--fit rounded-3 m-2 py-3  border-0">
+                        <img class="spotify-main__cards-card-img-fit spotify-main__cards-card-img-fit--shadow" src="https://t.scdn.co/images/7262179db37c498480ef06bfacb60310.jpeg" alt="card imagen">
+                         <div class="spotify-main__cards-card-body card-body px-0">
+                            <h5 class="spotify-main__cards-card-body-title card-title fs-6 fw-bold m-0 text-white text-capitalize">Podcast mas escuchados..</h5>
+                            <p class="spotify-main__cards-card-body-author fw-semibold text-capitalize"></p>
+                        </div>
+                    </div>
+                    <div class="spotify-main__cards-card card spotify-main__cards-card--fit rounded-3 m-2 py-3  border-0">
+                        <img class="spotify-main__cards-card-img-fit spotify-main__cards-card-img-fit--shadow" src="https://t.scdn.co/images/cd59d6084c4a4c5191aeaad187246f24.jpeg" alt="card imagen">
+                         <div class="spotify-main__cards-card-body card-body px-0">
+                            <h5 class="spotify-main__cards-card-body-title card-title fs-6 fw-bold m-0 text-white text-capitalize">Nuevos Podcats</h5>
+                            <p class="spotify-main__cards-card-body-author fw-semibold text-capitalize"></p>
+                        </div>
+                    </div>
+                    <div class="spotify-main__cards-card card spotify-main__cards-card--fit rounded-3 m-2 py-3  border-0">
+                        <img class="spotify-main__cards-card-img-fit spotify-main__cards-card-img-fit--shadow" src="https://t.scdn.co/images/d951a2d590194722bbfffe2a99ab0e45.jpeg" alt="card imagen">
+                         <div class="spotify-main__cards-card-body card-body px-0">
+                            <h5 class="spotify-main__cards-card-body-title card-title fs-6 fw-bold m-0 text-white text-capitalize">Cuentos</h5>
+                            <p class="spotify-main__cards-card-body-author fw-semibold text-capitalize"></p>
+                        </div>
+                    </div> 
+                    <div class="spotify-main__cards-card card spotify-main__cards-card--fit rounded-3 m-2 py-3  border-0">
+                        <img class="spotify-main__cards-card-img-fit spotify-main__cards-card-img-fit--shadow" src="https://t.scdn.co/images/ddc7cce63cdf49b5a632fb90872929e3.jpeg" alt="card imagen">
+                         <div class="spotify-main__cards-card-body card-body px-0">
+                            <h5 class="spotify-main__cards-card-body-title card-title fs-6 fw-bold m-0 text-white text-capitalize">Crimenes reales</h5>
+                            <p class="spotify-main__cards-card-body-author fw-semibold text-capitalize"></p>
+                        </div>
+                    </div> 
+                    <div class="spotify-main__cards-card card spotify-main__cards-card--fit rounded-3 m-2 py-3  border-0">
+                        <img class="spotify-main__cards-card-img-fit spotify-main__cards-card-img-fit--shadow" src="https://t.scdn.co/images/c3d8dfcefd33495ba83756d57a43f15b.jpeg" alt="card imagen">
+                         <div class="spotify-main__cards-card-body card-body px-0">
+                            <h5 class="spotify-main__cards-card-body-title card-title fs-6 fw-bold m-0 text-white text-capitalize">Actualidad y politica</h5>
+                            <p class="spotify-main__cards-card-body-author fw-semibold text-capitalize"></p>
+                        </div>
+                    </div>
+                    <div class="spotify-main__cards-card card spotify-main__cards-card--fit rounded-3 m-2 py-3  border-0">
+                        <img class="spotify-main__cards-card-img-fit spotify-main__cards-card-img-fit--shadow" src="https://t.scdn.co/images/cd59d6084c4a4c5191aeaad187246f24.jpeg" alt="card imagen">
+                         <div class="spotify-main__cards-card-body card-body px-0">
+                            <h5 class="spotify-main__cards-card-body-title card-title fs-6 fw-bold m-0 text-white text-capitalize">Comedia</h5>
+                            <p class="spotify-main__cards-card-body-author fw-semibold text-capitalize"></p>
+                        </div>
+                    </div>     
+                </div>             
+            </article>
+            <footer class="spotify-main-footer d-flex justify-content-evenly align-items-start flex-wrap">
+                <dl class="spotify-main-footer__categorias d-flex flex-column d-lg-grid col-6">
+                    <dt class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--start spotify-main-footer__categorias-item--title text-white fw-bold fs-5 text-capitalize my-3">
+                        company
+                    </dt>
+                    <dd class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--start fw-semibold fs-6 text-capitalize m-0 mb-1">
+                        <a href="#" class="spotify-main-footer__categorias-item-link">about</a>
+                    </dd>
+                    <dd class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--start fw-semibold fs-6 text-capitalize m-0 mb-1">
+                        <a href="#" class="spotify-main-footer__categorias-item-link">jobs</a>
+                    </dd>
+                    <dd class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--start fw-semibold fs-6 text-capitalize m-0 mb-1">
+                        <a href="#" class="spotify-main-footer__categorias-item-link">for the record</a>
+                    </dd>
+                    <dt class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--middle spotify-main-footer__categorias-item--title text-white fw-bold fs-5 text-capitalize my-3">
+                        communities
+                    </dt>
+                    <dd class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--middle fw-semibold fs-6 text-capitalize m-0 mb-1">
+                        <a href="#" class="spotify-main-footer__categorias-item-link">for artists</a>
+                    </dd>
+                    <dd class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--middle fw-semibold fs-6 text-capitalize m-0 mb-1">
+                        <a href="#" class="spotify-main-footer__categorias-item-link">developers</a>
+                    </dd>
+                    <dd class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--middle fw-semibold fs-6 text-capitalize m-0 mb-1">
+                        <a href="#" class="spotify-main-footer__categorias-item-link">adverstising</a>
+                    </dd>
+                    <dd class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--middle fw-semibold fs-6 text-capitalize m-0 mb-1">
+                        <a href="#" class="spotify-main-footer__categorias-item-link">vendors</a>
+                    </dd>
+                    <dt class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--end spotify-main-footer__categorias-item--title text-white fw-bold fs-5 text-capitalize my-3">
+                        Useful links
+                    </dt>
+                    <dd class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--end fw-semibold fs-6 text-capitalize m-0 mb-1">
+                        <a href="#" class="spotify-main-footer__categorias-item-link">support</a>
+                    </dd>
+                    <dd class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--end fw-semibold fs-6 text-capitalize m-0 mb-1">
+                        <a href="#" class="spotify-main-footer__categorias-item-link">free mobile app</a>
+                    </dd>                    
+                </dl>
+                <ul class="spotify-main-footer__redes col-3 d-flex justify-content-evenly flex-column flex-lg-row ">
+                    <li class="spotify-main-footer__redes-item rounded-pill mt-2">
+                        <a href="#" class="spotify-main-footer__redes-item-link fs-3 text-black"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li class="spotify-main-footer__redes-item rounded-pill mt-2">
+                        <a href="#" class="spotify-main-footer__redes-item-link fs-3 text-black"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li class="spotify-main-footer__redes-item rounded-pill mt-2">
+                        <a href="#" class="spotify-main-footer__redes-item-link fs-3 text-black"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                </ul>
+                <h6 class="spotify-main-footer__copyright col-12 pt-3 ps-3">
+                    <small class="spotify-main-footer__copyright-small">© 2023 spotify AB</small>
+                </h6>
+            </footer>
+        </section>
+    </main>
+    <aside class="spotify-aside"></aside>
+    <footer class="spotify-footer"></footer>
+</body>
+</html>
