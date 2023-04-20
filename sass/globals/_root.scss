@@ -4,6 +4,52 @@ $gray-text:#959595;
 $gray-card: #181818;
 $gray-card-active:#282828;
 
+/*----------  CARDS   ----------*/
+/* 
+IMG{
+    altura x ancho
+    -xxl:   13rem
+    -xl:    12.rem
+    -lg:    10.9rem
+    -md:    8rem
+    -sm:    4rem   
+    -xs:    2.5rem
+}
+
+CARDS{
+    altura    
+    -xxl:    18.625rem
+    -xl:    15.2rem
+    -lg:    10.75rem
+    -md:    7.8rem
+    -sm:    5.5rem
+    -xs:    3.5rem
+    anchura
+    -xxl:    100%
+    -xl:    
+    -lg:    10.75rem
+    -md:    7.8rem
+    -sm:    5.5rem
+    -xs:    3.5rem
+}
+*/
+
+$card-img-size:(
+    "xl":14.5rem,
+    "lg":12rem,
+    "md":9.25rem,
+    "sm":5rem,
+    "xs":2.5rem
+);
+
+$card-height-size:(
+    "xxl":    18.625rem,
+    "xl":    15.2rem,
+    "lg":    10.75rem,
+    "md":    7.8rem,
+    "sm":    5.5rem,
+    "xs":    3.5rem
+);
 
 $arrayColors: (
     "gray-main":$gray-main,
@@ -12,4 +58,6 @@ $arrayColors: (
     "gray-card-active":$gray-card-active
 );
 
-@include varsCreate(spotify,$arrayColors)
+@include varsCreate(spotify,$arrayColors);
+@include varsCreate(spotify-card-img,$card-img-size);
+@include varsCreate(spotify-card-height,$card-height-size);
