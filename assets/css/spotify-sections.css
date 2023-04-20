@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*----------  CARDS   ----------*/
 /* 
 IMG{
@@ -25,11 +26,21 @@ CARDS{
     -md:    7.8rem
     -sm:    5.5rem
     -xs:    3.5rem
+FONT{
+    -xl:    clamp(3rem, calc(4rem + 3vw), 8rem)
+    -sm:    clamp(.85rem, calc(.8rem + 1vw), 1.5rem)
 }
 */
 :root {
+  --spotify-font-xl: clamp(3rem, 4rem + 3vw, 8rem);
+  --spotify-font-md: clamp(1.5rem, 1.5rem + 1vw, 3rem);
+  --spotify-font-xs: clamp(0.7rem, 0.7rem + 1vw, 1rem);
+}
+
+:root {
   --spotify-gray-main: #121212;
   --spotify-gray-text: #959595;
+  --spotify-white-text: hsla(0, 0%, 100%, 0.7);
   --spotify-gray-card: #181818;
   --spotify-gray-card-active: #282828;
 }
@@ -77,18 +88,6 @@ body {
 .spotify-main {
   grid-area: main;
   background: var(--spotify-gray-main);
-}
-.spotify-main-section-title {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-}
-.spotify-main-section-title-link--small {
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-.spotify-main-section-title-link--small:hover {
-  text-decoration: underline;
 }
 .spotify-main-post-office {
   display: grid;
@@ -163,6 +162,106 @@ body {
   font-size: 1rem;
   color: var(--spotify-gray-text);
 }
+.spotify-main-section-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.spotify-main-section-title-link--small {
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.spotify-main-section-title-link--small:hover {
+  text-decoration: underline;
+}
+.spotify-main-header {
+  min-height: 21.25rem;
+}
+.spotify-main-header__img {
+  height: var(--spotify-card-img-xl);
+  width: var(--spotify-card-img-xl);
+  box-shadow: 0 0 0.9rem 0.2rem rgba(0, 0, 0, 0.8);
+}
+.spotify-main-header__title-categoria, .spotify-main-header__title-studio {
+  font-size: var(--spotify-font-xs);
+}
+.spotify-main-header__title-studio {
+  line-height: 0.5rem;
+}
+.spotify-main-header__title-studio--about-users::before {
+  content: "·";
+}
+.spotify-main-header__title-studio--about-hours {
+  color: var(--spotify-white-text);
+}
+.spotify-main-header__title-studio-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.spotify-main-header__title-studio-link {
+  color: var(--bs-white);
+  text-decoration: none;
+}
+.spotify-main-header__title-studio-link:hover {
+  text-decoration: underline;
+}
+.spotify-main-header__title-categoria--description, .spotify-main-header__title-studio-about-hours {
+  color: var(--spotify-white-text);
+}
+.spotify-main-header__title-author {
+  font-size: var(--spotify-font-xl);
+}
+.spotify-main-header-controls-button {
+  width: -moz-fit-content;
+  width: fit-content;
+  background: transparent;
+  position: relative;
+  min-height: 4rem;
+  min-width: 4rem;
+}
+.spotify-main-header-controls-button-icon {
+  height: 4rem;
+  width: 4rem;
+  font-size: var(--spotify-font-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.spotify-main-header-controls-button-icon--love {
+  position: absolute;
+  top: 0;
+}
+.spotify-main-header-controls-button-icon--love:hover {
+  animation: corazon 0.9s alternate ease infinite;
+}
+.spotify-main-header-controls-button-icon:hover {
+  color: var(--bs-danger);
+}
+.spotify-main-header-controls-button-icon:hover::after {
+  opacity: 1;
+}
+.spotify-main-header-controls-button-icon::after {
+  content: "";
+  opacity: 0;
+  background: var(--bs-white);
+  height: 70%;
+  width: 65%;
+  position: absolute;
+  top: 0.8rem;
+  left: 0.7rem;
+  z-index: -10;
+  border-radius: 3rem 4rem 2rem 8rem;
+  transform: rotate(90deg);
+  transition: opacity 0.5s;
+}
+.spotify-main-header-controls-button--follow {
+  transition: background 1s;
+}
+.spotify-main-header-controls-button--follow:hover {
+  background: var(--spotify-gray-card-active);
+}
 .spotify-main-footer__categorias {
   grid-auto-flow: dense;
   grid-template-columns: repeat(3, 1fr);
@@ -210,6 +309,14 @@ body {
 }
 
 /*----------  ANIMATIONS  ----------*/
+@keyframes corazon {
+  0% {
+    font-size: 3rem;
+  }
+  100% {
+    font-size: 4rem;
+  }
+}
 /*=============================================
 =            medias                           =
 =============================================*/

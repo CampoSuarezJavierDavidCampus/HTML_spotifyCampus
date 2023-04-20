@@ -31,8 +31,17 @@ CARDS{
     -md:    7.8rem
     -sm:    5.5rem
     -xs:    3.5rem
+FONT{
+    -xl:    clamp(3rem, calc(4rem + 3vw), 8rem)
+    -sm:    clamp(.85rem, calc(.8rem + 1vw), 1.5rem)
 }
 */
+
+$font-size:(
+    "xl":clamp(3rem, calc(4rem + 3vw), 8rem),    
+    "md":clamp(1.5rem, calc(1.5rem + 1vw), 3rem),
+    "xs":clamp(.7rem, calc(.7rem + 1vw), 1rem)
+);
 
 $card-img-size:(
     "xl":14.5rem,
@@ -50,14 +59,24 @@ $card-height-size:(
     "sm":    5.5rem,
     "xs":    3.5rem
 );
+$card-height-size:(
+    "xxl":    18.625rem,
+    "xl":    15.2rem,
+    "lg":    10.75rem,
+    "md":    7.8rem,
+    "sm":    5.5rem,
+    "xs":    3.5rem
+);
 
 $arrayColors: (
     "gray-main":$gray-main,
     "gray-text":$gray-text,
+    "white-text": hsla(0,0%,100%,.7),
     "gray-card":$gray-card,
-    "gray-card-active":$gray-card-active
+    "gray-card-active":$gray-card-active    
 );
 
+@include varsCreate(spotify-font,$font-size);
 @include varsCreate(spotify,$arrayColors);
 @include varsCreate(spotify-card-img,$card-img-size);
 @include varsCreate(spotify-card-height,$card-height-size);

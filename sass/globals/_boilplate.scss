@@ -28,24 +28,6 @@ body{
     &-main{
         grid-area: main;
         background: var(--spotify-gray-main);        
-        //section
-        &-section{ 
-            &--header{
-                
-            }           
-            &-title{
-                display: flex;
-                align-items: baseline;
-                justify-content: space-between;
-                &-link--small{
-                    text-decoration: none;
-                    font-size: .9rem;
-                    &:hover{
-                        text-decoration: underline;
-                    }
-                }
-            }
-        }
         //post Office
         &-post-office{  
             
@@ -125,6 +107,135 @@ body{
                         font-size: 1rem;
                         color:var(--spotify-gray-text);
                     }
+                }
+            }
+        }
+        //section
+        &-section{ 
+            &--header{
+                
+            }           
+            &-title{
+                display: flex;
+                align-items: baseline;
+                justify-content: space-between;
+                &-link--small{
+                    text-decoration: none;
+                    font-size: .9rem;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        //header
+        &-header{
+            min-height: 21.25rem;
+            &__img{
+                height: var(--spotify-card-img-xl);
+                width: var(--spotify-card-img-xl);
+                box-shadow:0 0 .9rem .2rem rgba(0, 0, 0, 0.8);
+            }
+            &__title{
+                &-categoria, &-studio{
+                    font-size: var(--spotify-font-xs);
+                }
+
+                &-studio{
+                    line-height: .5rem;
+                    &--about{
+                        &-users::before{
+                            content: "·";
+                        }
+
+                        &-hours{
+                            color: var(--spotify-white-text);        
+                        }                        
+                    }
+                    &-icon{
+                        height:1.5rem;
+                        width: 1.5rem;
+                    }
+                    &-link{
+                        color: var(--bs-white);
+                        text-decoration: none;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                
+                &-categoria--description,&-studio-about-hours{
+                    color: var(--spotify-white-text);
+                }
+               
+                &-author{                   
+                    font-size: var(--spotify-font-xl) ;
+                }
+
+                
+                
+            }
+
+            &-controls{
+                &-button{                    
+                    width: fit-content;
+                    background: transparent;
+                    position: relative;
+                    min-height: 4rem;
+                    min-width: 4rem;
+                    &-icon{
+                        height: 4rem;
+                        width: 4rem;
+                        font-size: var(--spotify-font-md);        
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;      
+                        position: relative;                        
+                        z-index: 1;
+
+                        &--love{
+                            position: absolute;
+                            top: 0;
+                            &:hover{
+                                animation:corazon .9s alternate ease infinite;
+                            }   
+                        }
+
+                        &:hover{
+                            color: var(--bs-danger);
+                        }
+                        
+                        &:hover::after{
+                            opacity: 1;
+                        }                        
+                        &::after{
+                            content: "";
+                            opacity: 0;
+                            background: var(--bs-white);
+                            height: 70%;
+                            width: 65%;
+                            position: absolute;
+                            top: .8rem;
+                            left: .7rem;
+                            z-index: -10;
+                            border-radius: 3rem 4rem 2rem 8rem ;
+                            transform: rotate(90deg);                            
+                            transition: opacity .5s;
+                        }
+                    }
+
+                    
+                    &--follow{
+                        transition: background 1s;
+                        &:hover{
+                            background: var(--spotify-gray-card-active);
+
+                        }
+                    }
+                }
+                &-dropdown{
+
                 }
             }
         }
