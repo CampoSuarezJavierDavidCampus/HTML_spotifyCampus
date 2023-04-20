@@ -25156,9 +25156,4 @@ readers do not read off random characters that represent icons */
   border-width: 0;
 }
 
-/*=====  End of 8. Add additional custom code here  ======*/
-@media (max-width: 767.98px) {
-  body {
-    grid-template-areas: "header header header header" "main main main main" "main main main main" "main main main main" "main main main main" "footer footer footer footer";
-  }
-}/*# sourceMappingURL=bootstrap_fontawesome.css.map */
+/*=====  End of 8. Add additional custom code here  ======*//*# sourceMappingURL=bootstrap_fontawesome.css.map */
