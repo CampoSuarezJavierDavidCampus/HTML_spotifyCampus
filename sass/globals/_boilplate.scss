@@ -130,7 +130,27 @@ body{
         }
         //header
         &-header{
-            min-height: 21.25rem;
+            min-height: 21.25rem;            
+            position: relative;
+            z-index: 1;
+            &::after{
+                content: "";
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                position: absolute;
+                z-index: 100;                
+                background: linear-gradient(transparent 0,rgba(0,0,0,.5) 100%,var(--spotify-gray-main));
+            }            
+            &__img,
+            &__title,
+            &__controls,
+            &__description{
+                z-index: 200;
+                background: transparent;
+            }
+
             &__img{
                 height: var(--spotify-card-img-xl);
                 width: var(--spotify-card-img-xl);
@@ -177,7 +197,7 @@ body{
                 
             }
 
-            &-controls{
+            &__controls{
                 &-button{                    
                     width: fit-content;
                     background: transparent;
@@ -226,16 +246,108 @@ body{
                     }
 
                     
-                    &--follow{
-                        transition: background 1s;
+                    &--add{
+                        transition: background .4s;   
+                        min-width: 4rem;
+                        width: fit-content;
+                        &-follow{
+                            min-width: 6.8rem;                            
+                        }                
                         &:hover{
                             background: var(--spotify-gray-card-active);
-
                         }
                     }
                 }
                 &-dropdown{
+                    &-button{
+                        background: transparent;
+                        border: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: color .2s ;
+                        &:hover{
+                            color: var(--bs-white);
+                        }
+                        &::after{
+                            content: "";
+                            border: none;
+                            position: absolute;
+                        }
+                    }
+                }
+            }
+            &__description{                
+                background: var(--spotify-gray-card-light);
+                border-bottom:solid .4rem  var(--spotify-gray-main);
+                &-nav{
+                    &-item{
 
+                        position: relative;
+                        &-link{
+                            color: var(--spotify-gray-text);
+                            &:hover{
+                                color: var(--bs-white);
+                            }
+                            &.active{
+                                color: var(--bs-white);
+                                &::before{
+                                    opacity: 1;
+                                }
+                            }         
+                            &::before{
+                                content: "";
+                                position: absolute;                            
+                                background: var(--bs-primary);
+                                bottom: 0;
+                                width: 30%;
+                                height: 4px;      
+                                left: 35%;
+                                opacity: 0;
+                            }                   
+                        }
+                        
+                    }
+                }
+                &-content{
+                    color: var(--spotify-white-text);
+                    &-more{
+                        text-decoration: none;
+                    }
+                }
+                &-options{
+                    list-style: none;
+                    &-button{
+                        width: fit-content;                        
+                        border:solid .2rem var(--spotify-white-text);
+                        transition: transform .2s, border .2s;
+                        transition-timing-function: ease;
+                        &:hover{
+                            border:solid .3rem var(--bs-white);
+                            transform: scale(1.1);
+                        }           
+                        &-link{
+                            text-decoration: none;
+                        }                                   
+                    }                    
+                }
+               
+            }
+        }
+        //play list
+        &-music{            
+            &__play{
+                &-card{
+                    background: var(--spotify-gray-card-light);
+                    display: flex;
+                    flex-wrap: wrap;
+                    &-content{
+                        &-small, &-description{
+                            font-size: var(--spotify-font-xs);
+                            color: var(--spotify-white-text);
+                            
+                        }
+                    }
                 }
             }
         }

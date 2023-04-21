@@ -3,6 +3,7 @@ $gray-main: #121212;
 $gray-text:#959595;
 $gray-card: #181818;
 $gray-card-active:#282828;
+$gray-card-light:linear-gradient( transparent -10%,$gray-card-active 80%,$gray-card);
 
 /*----------  CARDS   ----------*/
 /* 
@@ -38,7 +39,7 @@ FONT{
 */
 
 $font-size:(
-    "xl":clamp(3rem, calc(4rem + 3vw), 8rem),    
+    "xl":clamp(2rem, calc(3rem + 3vw), 8rem),    
     "md":clamp(1.5rem, calc(1.5rem + 1vw), 3rem),
     "xs":clamp(.7rem, calc(.7rem + 1vw), 1rem)
 );
@@ -68,11 +69,12 @@ $card-height-size:(
     "xs":    3.5rem
 );
 
-$arrayColors: (
+$arrayColors: (    
     "gray-main":$gray-main,
     "gray-text":$gray-text,
     "white-text": hsla(0,0%,100%,.7),
     "gray-card":$gray-card,
+    "gray-card-light":$gray-card-light,
     "gray-card-active":$gray-card-active    
 );
 

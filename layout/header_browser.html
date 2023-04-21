@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="../assets/css/bootstrap_fontawesome.css">
     <link rel="stylesheet" href="../assets/css/spotify-sections.css">
     <link rel="icon" href="../assets/images/globals/Spotify_icon.svg.png">
-    <script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../assets/js/bootstrap/bootstrap.min.js"></script>    
 </head>
 <body>
     <header class="spotify-header navbar py-3 bg-black px-4 row  w-100 p-0 m-0 justify-content-between align-items-center">
@@ -57,8 +58,8 @@
             </nav>                 
     </header>
     <main class="spotify-main">
-        <section class="spotify-main-container py-4 px-0 row ">
-            <header class="spotify-main-header bg-primary pt-5 px-5 row">
+        <section class="spotify-main-container pt-lg-4 px-4 row">
+            <header class="spotify-main-header pt-5 px-4 px-lg-5 row m-0 bg-primary mb-2">
                 <img class="spotify-main-header__img p-0 me-2"  src="https://i.scdn.co/image/ab67616d00001e0228ccaf8cb23d857cb9361ec4" alt="">
                 <h1 class="spotify-main-header__title col text-capitalize  text-white py-4 lh-1">
                     <small class="spotify-main-header__title-categoria fw-bold d-block">playlist</small>
@@ -73,35 +74,113 @@
                         302 sogns, 
                         <span class="spotify-main-header__title-studio spotify-main-header__title-studio---about spotify-main-header__title-studio--about-hours"> about 11hr</span>
                     </span>
-                </h1>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat porro facilis illum sapiente, enim est debitis aliquam in tempora! Fugit eveniet aliquid ab, tempora officiis facere molestiae ut nisi vel?
-                    Nesciunt quidem eligendi ducimus quo culpa nobis, fuga, rem dolorum accusamus temporibus blanditiis commodi minima sed! Illum laudantium nihil ipsam veritatis voluptatibus culpa, nulla quibusdam! Labore maxime dolorum repudiandae in!
-                    Expedita, fuga, vel rem illum provident quia sed fugiat ex eius laborum consequatur cupiditate incidunt magnam! Accusamus ex amet ipsa aliquam laborum eum distinctio necessitatibus dicta, non facere voluptatem autem!
-                </p>
-                <form class="spotify-main-header-controls d-flex align-items-center"> 
-                    <button class="spotify-main-header-controls-button my-2  mx-1 border-0 p-0 ">
-                        <i class="spotify-main-header-controls-button-icon spotify-main-header-controls-button-icon--play fa-solid fa-play"></i>
+                </h1>                
+                <form class="spotify-main-header__controls d-flex align-items-center flex-wrap "> 
+                    <button class="spotify-main-header__controls-button my-2  mx-1 border-0 p-0 ">
+                        <i class="spotify-main-header__controls-button-icon spotify-main-header__controls-button-icon--play fa-solid fa-play"></i>
                     </button>
-                    <button class="spotify-main-header-controls-button my-2  mx-1 border-0 p-0 border-0 spotify-main-header-controls-button ">
-                        <i class="spotify-main-header-controls-button-icon spotify-main-header-controls-button-icon--love fa-regular fa-heart"></i>
+                    <button class="spotify-main-header__controls-button my-2  mx-1 border-0 p-0 border-0 spotify-main-header__controls-button ">
+                        <i class="spotify-main-header__controls-button-icon spotify-main-header__controls-button-icon--love fa-regular fa-heart"></i>
                     </button>
-                    <button class="spotify-main-header-controls-button my-2  mx-1 spotify-main-header-controls-button--follow text-capitalize fw-bold fs-4 border border-white border-2 px-3 py-2 mx-2 text-white rounded-pill">
+                    <button class="spotify-main-header__controls-button my-2  mx-1 spotify-main-header__controls-button--add spotify-main-header__controls-button--add-follow text-capitalize fw-bold fs-4 border border-white border-2 px-3 py-2 mx-2 text-white rounded-pill">
                         follow
                     </button>
-                    <div class="spotify-main-header-controls-dropdown dropdown">
-                        <button class="spotify-main-header-controls-dropdown-button btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="spotify-main-header__controls-button my-2  mx-1 spotify-main-header__controls-button--add text-capitalize fw-bold fs-4 border border-white border-2 px-3 py-2 mx-2 text-white rounded-pill">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="spotify-main-header__controls-dropdown dropdown">
+                        <button class="spotify-main-header__controls-dropdown-button px-2 mx-4 fs-1 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-ellipsis"></i>
                         </button>
-                        <ul class="spotify-main-header-controls-dropdown-menu dropdown-menu">
+                        <ul class="spotify-main-header__controls-dropdown-menu dropdown-menu">
                           <li><a class="dropdown-item" href="#">Action</a></li>
                           <li><a class="dropdown-item" href="#">Another action</a></li>
                           <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </div>                    
                 </form>
-                
+                <div class="spotify-main-header__description pb-4 rounded-top ">
+                    <ul class="spotify-main-header__description-nav nav justify-content-start mb-4">
+                        <li class="spotify-main-header__description-nav-item nav-item">
+                          <a class="spotify-main-header__description-nav-item-link nav-link text-capitalize fw-semibold fs-5 active" aria-current="page" href="#">decription</a>
+                        </li>
+                        <li class="spotify-main-header__description-nav-item nav-item">
+                          <a class="spotify-main-header__description-nav-item-link nav-link text-capitalize fw-semibold fs-5" href="#">transcript</a>
+                        </li>
+                    </ul>                
+                    <p class="spotify-main-header__description-content col-lg-10 fs-6 m-0 pb-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore temporibus architecto, quibusdam, magnam distinctio, molestiae iste dolor ut similique amet iusto autem provident eos placeat esse sint eum! Sit, nam.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. A consequatur impedit molestiae assumenda nobis dolores ex cumque harum quaerat mollitia? Hic blanditiis sequi at doloremque deserunt mollitia ipsum rem et.
+                        <a class="spotify-main-header__description-content-more fw-semibold text-white" href="#">... see more</a>
+                    </p>                                          
+                    <ul class="spotify-main-header__description-options row flex-wrap p-2">
+                        <li class="spotify-main-header__description-options-button px-3 py-1 rounded-pill">
+                            <a class="spotify-main-header__description-options-button-link text-white   text-capitalize fw-bold" href="#">
+                                see all episodes
+                            </a>
+                        </li>
+                    </ul>
+                </div>              
             </header>
+            <article class="spotify-main-music row flex-wrap-reverse p-0 m-0 mt-5">
+                <div class="spotify-main-music__play col-8 ">                    
+                    <div class="spotify-main-music__play-card p-4">                        
+                        <p class="spotify-main-music__play-card-content">
+                            <img src="https://i.scdn.co/image/ab6765630000f68d1f6fddcfa5767d816721ffa5" class="float-start" alt="">
+                            <small class="spotify-main-music__play-card-content-small text-capitalize">up next</small>
+                            <strong class="spotify-main-music__play-card-content-title text-capitalize">la voz - mabiland</strong>
+                            <span class="spotify-main-music__play-card-content-description">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto odio totam nostrum blanditiis. Sed cumque quod ea. Minima quae fugit, autem in blanditiis iure deleniti deserunt corrupti! Harum, voluptates blanditiis.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam minima amet quidem facere inventore quam praesentium quisquam ullam ipsum id voluptates est delectus non officiis blanditiis a, qui molestiae vero.
+                            </span>                            
+                        </p>
+                        <ul class="spotify-main-music__play-card-options row flex-row p-2">
+                            <li class="spotify-main-music__play-card-options-button px-3 py-1 rounded-pill">
+                                <a class="spotify-main-music__play-card-options-button-link text-white   text-capitalize fw-bold" href="#">
+                                    <i class="fa-solid fa-play"></i>
+                                </a>
+                            </li>
+                            <li class="spotify-main-music__play-card-options-button px-3 py-1 col">
+                                april 20 · 1hr 2 min
+                            </li>
+                            <li class="spotify-main-music__play-card-options-button px-3 py-1 rounded-pill">
+                                <a class="spotify-main-music__play-card-options-button-link text-white   text-capitalize fw-bold" href="#">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </a>
+                                <a class="spotify-main-music__play-card-options-button-link text-white   text-capitalize fw-bold" href="#">
+                                    <i class="fa-solid fa-circle-plus"></i>
+                                </a>
+                                <a class="spotify-main-music__play-card-options-button-link text-white   text-capitalize fw-bold" href="#">
+                                    <i class="fa-solid fa-share-from-square"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="spotify-main-music__play-list">
+                        <div class="spotify-main-music__play-card spotify-main-music__play-card--playlist"></div>
+                    </div>
+                </div>
+                <div class="spotify-main-music__about col-4">
+                    <h4 class="spotify-main-music__about-title"></h4>
+                    <p class="spotify-main-music__about-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum animi aperiam explicabo iusto impedit aliquid quibusdam harum illum, exercitationem delectus placeat odit reiciendis possimus quisquam minima, inventore molestias pariatur quas.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae natus, voluptate obcaecati consequuntur laudantium tempora. Corporis ab totam iste a porro provident. Odio magni maiores quaerat eius doloremque aspernatur incidunt.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae possimus corrupti, quos laudantium alias ipsum deleniti autem minima cum neque distinctio dolore, magnam repudiandae id, molestias beatae eveniet quibusdam perferendis!
+                    </p>
+                    <ul class="spotify-main-music__about-options row flex-wrap p-2">
+                        <li class="spotify-main-music__about-options-button px-3 py-1 rounded-pill">
+                            <a class="spotify-main-music__about-options-button-link text-white   text-capitalize fw-bold" href="#">
+                                society
+                            </a>
+                        </li>
+                        <li class="spotify-main-music__about-options-button px-3 py-1 rounded-pill">
+                            <a class="spotify-main-music__about-options-button-link text-white   text-capitalize fw-bold" href="#">
+                                culture
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
             <!-- <article class="spotify-main-section">
                 <h3 class="spotify-main-section-title text-white fw-bold fs-4 text-capitalize">
                     top podcast
