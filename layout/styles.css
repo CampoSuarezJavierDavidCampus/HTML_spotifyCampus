@@ -1,0 +1,186 @@
+.facebook{
+    width: 337px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 100px;
+    margin: auto;
+    background-color: #185abc;
+    border-radius: 20px;
+    border-color: white;
+    color: white;
+}
+.logo-f{
+    position: absolute;
+    left: 50px;
+    top: 25px;
+    margin: auto;
+}
+.apple{
+    width: 337px;
+    height: 50px;
+    position: absolute;
+    top: 155px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: black;
+    border-radius: 20px;
+    border-color: white;
+    color: white;
+}
+.logo-a{
+    position: absolute;
+    left: 50px;
+    top: 25px;
+    margin: auto;
+}
+.google{
+    width: 337px;
+    height: 50px;
+    position: absolute;
+    top: 210px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 20px;
+    border-color: white;
+}
+.logo-g{
+    position: absolute;
+    left: 28px;
+    top: -5px;
+    margin: 20px;
+    height: 20px;
+}
+.telefono{
+    width: 337px;
+    height: 50px;
+    position: absolute;
+    top: 265px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 20px;
+    border-color: white;
+}
+.logo-s{
+    width: auto;
+    height: 80px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.so{
+    position: absolute;
+    width: 323px;
+    height: 30px;
+    top: 315px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+.correo{
+    position: relative;
+    top: 350px;
+}
+.contraseña{
+    position: absolute;
+    top: 56%;
+    height: 30px;
+    border-radius: 10px;
+    width: 337px;
+    border-color: gray;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.texc{
+    position: absolute;
+    height: 30px;
+    width: 337px;
+    border-radius: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 47%;
+}
+.ceondu{
+    position: absolute;
+    width: 272px;
+    top: 44%;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+.c{
+    position: absolute;
+    width: 100px;
+    top: 53%;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+a{
+    color: inherit;
+    position: absolute;
+    top: 63%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 337px;
+    height: auto;
+}
+a:hover{
+    color: green;
+}
+.remember{
+    display: inline;
+}
+
+.recormember{
+    position: absolute;
+    top: 67%;
+    left: 0;
+    right: 0;
+    width: 337px;
+    height: auto;
+    margin: auto;
+}
+.submit{
+    background-color: green;
+    width: 150px;
+    height: 40px;
+    border-radius: 50px;
+    position: absolute;
+    top: 65%;
+    left: 52%;
+}
+.w337px{
+    width: 337px;
+    position: absolute;
+    top: 72%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.ntc{
+    position: absolute;
+    width: 150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 75%;
+}
+.REGISTRATE{
+    position: absolute;
+    top: 78%;
+    width: 337px;
+    border-radius: 337px;
+    height: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
