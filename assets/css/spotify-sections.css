@@ -45,13 +45,14 @@ FONT{
   --spotify-gray-card: #181818;
   --spotify-gray-card-light: linear-gradient(transparent -10%, #282828 80%, #181818);
   --spotify-gray-card-active: #282828;
+  --spotify-gray-card-semiwhite: hsla(0, 0%, 100%, 0.1);
 }
 
 :root {
   --spotify-card-img-xl: 14.5rem;
   --spotify-card-img-lg: 12rem;
   --spotify-card-img-md: 9.25rem;
-  --spotify-card-img-sm: 5rem;
+  --spotify-card-img-sm: 7rem;
   --spotify-card-img-xs: 2.5rem;
 }
 
@@ -395,14 +396,19 @@ body {
   transform: scale(1);
 }
 .spotify-main-music__play-card-content-img {
-  height: var(--spotify-card-img-md);
-  width: var(--spotify-card-img-md);
+  height: var(--spotify-card-img-sm);
+  width: var(--spotify-card-img-sm);
 }
 .spotify-main-music__play-card-content-picture {
   width: -moz-fit-content;
   width: fit-content;
 }
 .spotify-main-music__play-card-content-small, .spotify-main-music__play-card-content-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   font-size: var(--spotify-font-xs);
   color: var(--spotify-white-text);
 }
@@ -476,6 +482,12 @@ body {
 }
 .spotify-main-music__play-card--list:hover {
   background: var(--spotify-gray-card-active);
+}
+.spotify-main-music__play-card--solid {
+  background: transparent;
+}
+.spotify-main-music__play-card--solid:hover {
+  background: var(--spotify-gray-card-semiwhite);
 }
 .spotify-main-music__about {
   min-width: 20rem;
@@ -690,32 +702,3 @@ grid-breakpoints:
 =            MAIN TOP            =
 =============================================*/
 /*=====  End of MAIN TOP  ======*//*# sourceMappingURL=spotify-sections.css.map */
-/*=====  Footer =====*/
-.pie{
-    text-align: left;
-    background-image: linear-gradient(90deg,#af2896,#509bf5);
-    color: white;
-    width: 100%;
-    height: 90px;
-    border-width: 0px;
-
-    
-}
-.registrate{
-    border-radius: 50px;
-    background-color: white;
-    color: black;
-    height: 50px;
-    position: absolute;
-    right: 0%;
-    display: inline;
-    bottom: 25%;
-}
-.ejemplo{
-    width: 400px;
-}
-footer{
-    position: relative;
-    top: -100%;
-}
-/*===== End of Footer =====*/

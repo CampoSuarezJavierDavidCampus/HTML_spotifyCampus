@@ -395,31 +395,33 @@ body{
             }
         }
         //play list
-        &-music{      
-            
-            
-            &__play{
-                
+        &-music{
+            &__play{                
                 &-card{
                     background: var(--spotify-gray-card-light);
                     display: flex;
-                    flex-wrap: wrap;
+                    flex-wrap: wrap;                    
                     
                     &:hover .spotify-main-music__play-card-options-button--hidden,
                     &:active .spotify-main-music__play-card-options-button--hidden{
                         transform: scale(1);
                     }        
 
-                    &-content{
+                    &-content{ 
                         &-img{
-                            height: var(--spotify-card-img-md);
-                            width: var(--spotify-card-img-md);
+                            height: var(--spotify-card-img-sm);
+                            width: var(--spotify-card-img-sm);
                         }
                         &-picture{                            
                             width:fit-content;
                         }
 
-                        &-small, &-description{
+                        &-small, &-description{         
+                            display: -webkit-box;
+                            -webkit-line-clamp: 5;
+                            line-clamp: 5;
+                            -webkit-box-orient: vertical;  
+                            overflow: hidden;
                             font-size: var(--spotify-font-xs);
                             color: var(--spotify-white-text);
                             
@@ -501,6 +503,16 @@ body{
                         }
                         &:hover{
                             background: var(--spotify-gray-card-active);
+                        }
+                    }
+
+                    &--solid{
+                        background: transparent;
+                        &:hover{
+                            background: var(--spotify-gray-card-semiwhite);
+                        }
+                        & .potify-main-music__play-card-content-img {
+                            
                         }
                     }
                 }
