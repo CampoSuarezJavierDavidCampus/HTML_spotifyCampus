@@ -1,9 +1,5 @@
 @use 'mixins' as *;
-$gray-main: #121212;
-$gray-text:#959595;
-$gray-card: #181818;
-$gray-card-active:#282828;
-$gray-card-light:linear-gradient( transparent -10%,$gray-card-active 80%,$gray-card);
+
 
 /*----------  CARDS   ----------*/
 /* 
@@ -37,6 +33,12 @@ FONT{
     -sm:    clamp(.85rem, calc(.8rem + 1vw), 1.5rem)
 }
 */
+
+$gray-main: #121212;
+$gray-text:#959595;
+$gray-card: #181818;
+$gray-card-active:#282828;
+$gray-card-light:linear-gradient( transparent -10%,$gray-card-active 80%,$gray-card);
 
 $font-size:(
     "xl":clamp(2rem, calc(3rem + 3vw), 8rem),    
