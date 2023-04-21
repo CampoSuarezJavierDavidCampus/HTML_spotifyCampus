@@ -1,15 +1,18 @@
-@use '../custom' as bootstrap;
+@use 'mixins' as *;
 
-@include bootstrap.media-breakpoint-down('md'){
-    body{
-        grid-template-areas: 
-            "header header header header"
-            "main main main main"
-            "main main main main"
-            "main main main main"
-            "main main main main"
-            "footer footer footer footer"
-        ;    
-    }
-} 
+/*=============================================
+=            medias                           =
+=============================================*/
+
+/**
+grid-breakpoints:
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+*/
+
+/*=====  End of medias  ======*/
 

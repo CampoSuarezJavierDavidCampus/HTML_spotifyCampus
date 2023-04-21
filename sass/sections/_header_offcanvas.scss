@@ -3,7 +3,16 @@
 =            HEADER OFFCANVAS            =
 =============================================*/
 
-
+.spotify-header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    &-navbar{
+        &__navegation{
+            width: fit-content;
+        }
+    }
+}
 
 /*=====  End of HEADER OFFCANVAS  ======*/
 
