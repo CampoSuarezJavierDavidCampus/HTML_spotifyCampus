@@ -123,64 +123,192 @@
                 </div>              
             </header>
             <article class="spotify-main-music row flex-wrap-reverse p-0 m-0 mt-5">
-                <div class="spotify-main-music__play col-8 ">                    
+                <div class="spotify-main-music__play col-lg-7 ">                    
                     <div class="spotify-main-music__play-card p-4">                        
-                        <p class="spotify-main-music__play-card-content">
-                            <img src="https://i.scdn.co/image/ab6765630000f68d1f6fddcfa5767d816721ffa5" class="float-start" alt="">
+                        <p class="spotify-main-music__play-card-content d-flex flex-column">
                             <small class="spotify-main-music__play-card-content-small text-capitalize">up next</small>
-                            <strong class="spotify-main-music__play-card-content-title text-capitalize">la voz - mabiland</strong>
+                            <strong class="spotify-main-music__play-card-content-title text-capitalize text-white">la voz - mabiland</strong>
                             <span class="spotify-main-music__play-card-content-description">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto odio totam nostrum blanditiis. Sed cumque quod ea. Minima quae fugit, autem in blanditiis iure deleniti deserunt corrupti! Harum, voluptates blanditiis.
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam minima amet quidem facere inventore quam praesentium quisquam ullam ipsum id voluptates est delectus non officiis blanditiis a, qui molestiae vero.
                             </span>                            
                         </p>
-                        <ul class="spotify-main-music__play-card-options row flex-row p-2">
-                            <li class="spotify-main-music__play-card-options-button px-3 py-1 rounded-pill">
-                                <a class="spotify-main-music__play-card-options-button-link text-white   text-capitalize fw-bold" href="#">
+                        <ul class="spotify-main-music__play-card-options d-flex align-items-center col-12 p-2 flex-wrap ">
+                            <li class="spotify-main-music__play-card-options-button px-3 py-1 me-4 rounded-pill">
+                                <a class="spotify-main-music__play-card-options-button-link spotify-main-music__play-card-options-button-link--play text-white rounded-circle  text-capitalize fw-bold" href="#">
                                     <i class="fa-solid fa-play"></i>
                                 </a>
                             </li>
-                            <li class="spotify-main-music__play-card-options-button px-3 py-1 col">
+                            <li class="spotify-main-music__play-card-options-hours px-3 py-1 col">
                                 april 20 · 1hr 2 min
                             </li>
-                            <li class="spotify-main-music__play-card-options-button px-3 py-1 rounded-pill">
-                                <a class="spotify-main-music__play-card-options-button-link text-white   text-capitalize fw-bold" href="#">
+                            <li class="spotify-main-music__play-card-options-button spotify-main-music__play-card-options-button--hidden px-3 py-1 rounded-pill">
+                                <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
                                     <i class="fa-solid fa-ellipsis"></i>
                                 </a>
-                                <a class="spotify-main-music__play-card-options-button-link text-white   text-capitalize fw-bold" href="#">
+                                <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
                                     <i class="fa-solid fa-circle-plus"></i>
                                 </a>
-                                <a class="spotify-main-music__play-card-options-button-link text-white   text-capitalize fw-bold" href="#">
+                                <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
                                     <i class="fa-solid fa-share-from-square"></i>
                                 </a>
                             </li>
                         </ul>
                     </div>
+                    <h4 class="spotify-main-music__categorias fs-2 fw-bold text-white my-4">All Episodes</h4>                    
                     <div class="spotify-main-music__play-list">
-                        <div class="spotify-main-music__play-card spotify-main-music__play-card--playlist"></div>
+                        <div class="spotify-main-music__play-card spotify-main-music__play-card--list mb-4"> 
+                            <p class="spotify-main-music__play-card-content m-0">
+                                <picture class="spotify-main-music__play-card-content-picture col-12 col-lg-3 w-lg-auto float-start pe-4 pb-2 ">
+                                    <img class="spotify-main-music__play-card-content-img rounded-2" src="https://i.scdn.co/image/ab67656300005f1f1f6fddcfa5767d816721ffa5" alt="">
+                                </picture>
+                                <small class="spotify-main-music__play-card-content-small text-capitalize ">up next</small>
+                                <strong class="spotify-main-music__play-card-content-title text-capitalize text-white">la voz - mabiland</strong>
+                                <span class="spotify-main-music__play-card-content-description">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto odio totam nostrum blanditiis. Sed cumque quod ea. Minima quae fugit, autem in blanditiis iure deleniti deserunt corrupti! Harum, voluptates blanditiis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam minima amet quidem facere inventore quam praesentium quisquam ullam ipsum id voluptates est delectus non officiis blanditiis a, qui molestiae vero.
+                                </span>                            
+                            </p>
+                            <ul class="spotify-main-music__play-card-options d-flex align-items-center col-12 p-0 px-2 m-0 flex-wrap justify-content-between">
+                                <li class="spotify-main-music__play-card-options-button px-3 py-1 me-4 rounded-pill">
+                                    <a class="spotify-main-music__play-card-options-button-link spotify-main-music__play-card-options-button-link--play text-white rounded-circle  text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-play"></i>
+                                    </a>
+                                </li>
+                                <li class="spotify-main-music__play-card-options-hours px-3 py-1 col">
+                                    april 20 · 1hr 2 min
+                                </li>
+                                <li class="spotify-main-music__play-card-options-button spotify-main-music__play-card-options-button--hidden px-3 py-1 rounded-pill mt-2">
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                    </a>
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-share-from-square"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="spotify-main-music__play-card spotify-main-music__play-card--list mb-4"> 
+                            <p class="spotify-main-music__play-card-content m-0">
+                                <picture class="spotify-main-music__play-card-content-picture col-12 col-lg-3 w-lg-auto float-start pe-4 pb-2 ">
+                                    <img class="spotify-main-music__play-card-content-img rounded-2" src="https://i.scdn.co/image/ab67656300005f1f1f6fddcfa5767d816721ffa5" alt="">
+                                </picture>
+                                <small class="spotify-main-music__play-card-content-small text-capitalize ">up next</small>
+                                <strong class="spotify-main-music__play-card-content-title text-capitalize text-white">la voz - mabiland</strong>
+                                <span class="spotify-main-music__play-card-content-description">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto odio totam nostrum blanditiis. Sed cumque quod ea. Minima quae fugit, autem in blanditiis iure deleniti deserunt corrupti! Harum, voluptates blanditiis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam minima amet quidem facere inventore quam praesentium quisquam ullam ipsum id voluptates est delectus non officiis blanditiis a, qui molestiae vero.
+                                </span>                            
+                            </p>
+                            <ul class="spotify-main-music__play-card-options d-flex align-items-center col-12 p-0 px-2 m-0 flex-wrap justify-content-between">
+                                <li class="spotify-main-music__play-card-options-button px-3 py-1 me-4 rounded-pill">
+                                    <a class="spotify-main-music__play-card-options-button-link spotify-main-music__play-card-options-button-link--play text-white rounded-circle  text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-play"></i>
+                                    </a>
+                                </li>
+                                <li class="spotify-main-music__play-card-options-hours px-3 py-1 col">
+                                    april 20 · 1hr 2 min
+                                </li>
+                                <li class="spotify-main-music__play-card-options-button spotify-main-music__play-card-options-button--hidden px-3 py-1 rounded-pill mt-2">
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                    </a>
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-share-from-square"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="spotify-main-music__play-card spotify-main-music__play-card--list mb-4"> 
+                            <p class="spotify-main-music__play-card-content m-0">
+                                <picture class="spotify-main-music__play-card-content-picture col-12 col-lg-3 w-lg-auto float-start pe-4 pb-2 ">
+                                    <img class="spotify-main-music__play-card-content-img rounded-2" src="https://i.scdn.co/image/ab67656300005f1f1f6fddcfa5767d816721ffa5" alt="">
+                                </picture>
+                                <small class="spotify-main-music__play-card-content-small text-capitalize ">up next</small>
+                                <strong class="spotify-main-music__play-card-content-title text-capitalize text-white">la voz - mabiland</strong>
+                                <span class="spotify-main-music__play-card-content-description">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto odio totam nostrum blanditiis. Sed cumque quod ea. Minima quae fugit, autem in blanditiis iure deleniti deserunt corrupti! Harum, voluptates blanditiis.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam minima amet quidem facere inventore quam praesentium quisquam ullam ipsum id voluptates est delectus non officiis blanditiis a, qui molestiae vero.
+                                </span>                            
+                            </p>
+                            <ul class="spotify-main-music__play-card-options d-flex align-items-center col-12 p-0 px-2 m-0 flex-wrap justify-content-between">
+                                <li class="spotify-main-music__play-card-options-button px-3 py-1 me-4 rounded-pill">
+                                    <a class="spotify-main-music__play-card-options-button-link spotify-main-music__play-card-options-button-link--play text-white rounded-circle  text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-play"></i>
+                                    </a>
+                                </li>
+                                <li class="spotify-main-music__play-card-options-hours px-3 py-1 col">
+                                    april 20 · 1hr 2 min
+                                </li>
+                                <li class="spotify-main-music__play-card-options-button spotify-main-music__play-card-options-button--hidden px-3 py-1 rounded-pill mt-2">
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                    </a>
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-share-from-square"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="spotify-main-music__about col-4">
-                    <h4 class="spotify-main-music__about-title"></h4>
+                <div class="spotify-main-music__about col">
+                    <h4 class="spotify-main-music__about-title text-white fs-2 fw-light text-capitalize">About</h4>
                     <p class="spotify-main-music__about-description">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum animi aperiam explicabo iusto impedit aliquid quibusdam harum illum, exercitationem delectus placeat odit reiciendis possimus quisquam minima, inventore molestias pariatur quas.
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae natus, voluptate obcaecati consequuntur laudantium tempora. Corporis ab totam iste a porro provident. Odio magni maiores quaerat eius doloremque aspernatur incidunt.
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae possimus corrupti, quos laudantium alias ipsum deleniti autem minima cum neque distinctio dolore, magnam repudiandae id, molestias beatae eveniet quibusdam perferendis!
                     </p>
                     <ul class="spotify-main-music__about-options row flex-wrap p-2">
-                        <li class="spotify-main-music__about-options-button px-3 py-1 rounded-pill">
-                            <a class="spotify-main-music__about-options-button-link text-white   text-capitalize fw-bold" href="#">
+                        <li class="spotify-main-music__about-options-button px-3 py-1 mx-3 rounded-pill text-capitalize rounded-pill">
+                            <a class="spotify-main-music__about-options-button-link text-white   text-capitalize fw-light" href="#">
                                 society
                             </a>
                         </li>
-                        <li class="spotify-main-music__about-options-button px-3 py-1 rounded-pill">
-                            <a class="spotify-main-music__about-options-button-link text-white   text-capitalize fw-bold" href="#">
+                        <li class="spotify-main-music__about-options-button px-3 py-1 mx-3 rounded-pill text-capitalize rounded-pill">
+                            <a class="spotify-main-music__about-options-button-link text-white   text-capitalize fw-light" href="#">
                                 culture
                             </a>
                         </li>
                     </ul>
                 </div>
             </article>
+            <table class="spotify-main-table table">
+                <thead class="spotify-main-table__head">
+                  <tr class="spotify-main-table__head-row">
+                    <th class="spotify-main-table__head-col" scope="col"># title</th>
+                    <th class="spotify-main-table__head-col" scope="col">album</th>
+                    <th class="spotify-main-table__head-col" scope="col">date added</th>
+                    <th class="spotify-main-table__head-col" scope="col">
+                        <i class="fa-regular fa-clock"></i>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="spotify-main-table__body">
+                  <tr>
+                    <th scope="row">
+                        <span>1</span>
+                        <img src="" alt="">
+                        <span>
+                            <strong></strong>
+                            <small></small>
+                        </span>
+                    </th>
+                    <td>the last don</td>
+                    <td>jan 9,2023</td>
+                    <td>3:24</td>
+                  </tr>
+                </tbody>
+              </table>
             <!-- <article class="spotify-main-section">
                 <h3 class="spotify-main-section-title text-white fw-bold fs-4 text-capitalize">
                     top podcast

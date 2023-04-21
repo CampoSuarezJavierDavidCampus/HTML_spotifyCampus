@@ -33,7 +33,8 @@ FONT{
 */
 :root {
   --spotify-font-xl: clamp(2rem, 3rem + 3vw, 8rem);
-  --spotify-font-md: clamp(1.5rem, 1.5rem + 1vw, 3rem);
+  --spotify-font-lg: clamp(1.5rem, 1.5rem + 1vw, 3rem);
+  --spotify-font-md: clamp(0.95rem, 0.95rem + 1vw, 2rem);
   --spotify-font-xs: clamp(0.7rem, 0.7rem + 1vw, 1rem);
 }
 
@@ -117,10 +118,10 @@ body {
   justify-content: center;
   transition: background 0.3s;
 }
-.spotify-main-post-office__card--fit:hover {
+.spotify-main-post-office__card--fit:hover, .spotify-main-post-office__card--fit:active {
   background: var(--spotify-gray-card-active);
 }
-.spotify-main-post-office__card--fit:hover figure figcaption {
+.spotify-main-post-office__card--fit:hover figure figcaption, .spotify-main-post-office__card--fit:active figure figcaption {
   opacity: 1;
   bottom: 0.4rem;
 }
@@ -141,7 +142,7 @@ body {
   opacity: 0;
   transition: all 0.3s;
 }
-.spotify-main-post-office__card-figure-caption:hover {
+.spotify-main-post-office__card-figure-caption:hover, .spotify-main-post-office__card-figure-caption:active {
   transform: scale(1.1);
 }
 .spotify-main-post-office__card-img-small {
@@ -172,7 +173,7 @@ body {
   text-decoration: none;
   font-size: 0.9rem;
 }
-.spotify-main-section-title-link--small:hover {
+.spotify-main-section-title-link--small:hover, .spotify-main-section-title-link--small:active {
   text-decoration: underline;
 }
 .spotify-main-header {
@@ -219,7 +220,7 @@ body {
   color: var(--bs-white);
   text-decoration: none;
 }
-.spotify-main-header__title-studio-link:hover {
+.spotify-main-header__title-studio-link:hover, .spotify-main-header__title-studio-link:active {
   text-decoration: underline;
 }
 .spotify-main-header__title-categoria--description, .spotify-main-header__title-studio-about-hours {
@@ -239,7 +240,7 @@ body {
 .spotify-main-header__controls-button-icon {
   height: 4rem;
   width: 4rem;
-  font-size: var(--spotify-font-md);
+  font-size: var(--spotify-font-lg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -250,13 +251,13 @@ body {
   position: absolute;
   top: 0;
 }
-.spotify-main-header__controls-button-icon--love:hover {
+.spotify-main-header__controls-button-icon--love:hover, .spotify-main-header__controls-button-icon--love:active {
   animation: corazon 0.9s alternate ease infinite;
 }
-.spotify-main-header__controls-button-icon:hover {
+.spotify-main-header__controls-button-icon:hover, .spotify-main-header__controls-button-icon:active {
   color: var(--bs-danger);
 }
-.spotify-main-header__controls-button-icon:hover::after {
+.spotify-main-header__controls-button-icon:hover::after, .spotify-main-header__controls-button-icon:active::after {
   opacity: 1;
 }
 .spotify-main-header__controls-button-icon::after {
@@ -282,7 +283,7 @@ body {
 .spotify-main-header__controls-button--add-follow {
   min-width: 6.8rem;
 }
-.spotify-main-header__controls-button--add:hover {
+.spotify-main-header__controls-button--add:hover, .spotify-main-header__controls-button--add:active {
   background: var(--spotify-gray-card-active);
 }
 .spotify-main-header__controls-dropdown-button {
@@ -293,7 +294,7 @@ body {
   align-items: center;
   transition: color 0.2s;
 }
-.spotify-main-header__controls-dropdown-button:hover {
+.spotify-main-header__controls-dropdown-button:hover, .spotify-main-header__controls-dropdown-button:active {
   color: var(--bs-white);
 }
 .spotify-main-header__controls-dropdown-button::after {
@@ -311,7 +312,7 @@ body {
 .spotify-main-header__description-nav-item-link {
   color: var(--spotify-gray-text);
 }
-.spotify-main-header__description-nav-item-link:hover {
+.spotify-main-header__description-nav-item-link:hover, .spotify-main-header__description-nav-item-link:active {
   color: var(--bs-white);
 }
 .spotify-main-header__description-nav-item-link.active {
@@ -346,7 +347,7 @@ body {
   transition: transform 0.2s, border 0.2s;
   transition-timing-function: ease;
 }
-.spotify-main-header__description-options-button:hover {
+.spotify-main-header__description-options-button:hover, .spotify-main-header__description-options-button:active {
   border: solid 0.3rem var(--bs-white);
   transform: scale(1.1);
 }
@@ -358,9 +359,114 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+.spotify-main-music__play-card:hover .spotify-main-music__play-card-options-button--hidden, .spotify-main-music__play-card:active .spotify-main-music__play-card-options-button--hidden {
+  transform: scale(1);
+}
+.spotify-main-music__play-card-content-img {
+  height: var(--spotify-card-img-md);
+  width: var(--spotify-card-img-md);
+}
+.spotify-main-music__play-card-content-picture {
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .spotify-main-music__play-card-content-small, .spotify-main-music__play-card-content-description {
   font-size: var(--spotify-font-xs);
   color: var(--spotify-white-text);
+}
+.spotify-main-music__play-card-content-title {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: start;
+}
+.spotify-main-music__play-card-content-title::after {
+  content: "";
+  display: block;
+  height: 0.5rem;
+  width: 0.5rem;
+  -webkit-margin-end: 0.5rem;
+          margin-inline-end: 0.5rem;
+  border-radius: 5rem;
+  background: var(--bs-info);
+}
+.spotify-main-music__play-card-options {
+  list-style: none;
+  position: relative;
+}
+.spotify-main-music__play-card-options-hours {
+  color: var(--spotify-gray-text);
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.spotify-main-music__play-card-options-button {
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+}
+.spotify-main-music__play-card-options-button-link {
+  color: var(--spotify-white-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  height: var(--spotify-card-img-xs);
+  width: var(--spotify-card-img-xs);
+  font-size: var(--spotify-font-md);
+}
+.spotify-main-music__play-card-options-button-link:hover, .spotify-main-music__play-card-options-button-link:active {
+  color: var(--bs-primary);
+}
+.spotify-main-music__play-card-options-button-link--play {
+  height: calc(var(--spotify-card-img-xs) + 0.6rem);
+  width: calc(var(--spotify-card-img-xs) + 0.6rem);
+  background: var(--bs-primary);
+  font-size: var(--spotify-font-sm);
+  transition: transform 0.1s;
+}
+.spotify-main-music__play-card-options-button-link--play:hover {
+  transform: scale(1.2);
+}
+.spotify-main-music__play-card-options-button--hidden {
+  transform: scale(0);
+  transition: transform 0.2s;
+  background: var(--spotify-gray-card-active);
+  box-shadow: 0 0 0.8rem 0.4rem rgba(24, 24, 24, 0.6);
+}
+.spotify-main-music__play-card--list {
+  border-top: solid 0.18rem var(--spotify-gray-card-active);
+  background: transparent;
+  transition: background 0.2s;
+}
+.spotify-main-music__play-card--list .spotify-main-music__play-card-content-small, .spotify-main-music__play-card--list .spotify-main-music__play-card-content-description {
+  font-size: calc(var(--spotify-font-xs) - 0.1rem);
+  color: var(--spotify-white-text);
+}
+.spotify-main-music__play-card--list:hover {
+  background: var(--spotify-gray-card-active);
+}
+.spotify-main-music__about-title {
+  background: linear-gradient(to left, var(--spotify-white-text) -10%, var(--spotify-gray-card-active) 60%, var(--spotify-gray-card));
+}
+.spotify-main-music__about-description {
+  color: var(--spotify-white-text);
+}
+.spotify-main-music__about-options {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+.spotify-main-music__about-options-button {
+  width: -moz-fit-content;
+  width: fit-content;
+  background: var(--spotify-gray-card);
+}
+.spotify-main-music__about-options-button-link {
+  font-size: var(--spotify-font-md);
+  text-decoration: none;
+}
+.spotify-main-music__about-options-button:hover {
+  background: var(--spotify-gray-card-active);
 }
 .spotify-main-footer__categorias {
   grid-auto-flow: dense;
@@ -379,7 +485,7 @@ body {
   color: var(--spotify-gray-text);
   text-decoration: none;
 }
-.spotify-main-footer__categorias-item-link:hover {
+.spotify-main-footer__categorias-item-link:hover, .spotify-main-footer__categorias-item-link:active {
   color: var(--bs-white);
 }
 .spotify-main-footer__redes {
@@ -393,7 +499,7 @@ body {
   justify-content: center;
   background: var(--bs-white);
 }
-.spotify-main-footer__redes-item:hover {
+.spotify-main-footer__redes-item:hover, .spotify-main-footer__redes-item:active {
   background: var(--spotify-gray-text);
 }
 .spotify-main-footer__copyright {

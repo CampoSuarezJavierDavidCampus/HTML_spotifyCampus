@@ -40,7 +40,8 @@ FONT{
 
 $font-size:(
     "xl":clamp(2rem, calc(3rem + 3vw), 8rem),    
-    "md":clamp(1.5rem, calc(1.5rem + 1vw), 3rem),
+    "lg":clamp(1.5rem, calc(1.5rem + 1vw), 3rem),
+    "md":clamp(0.95rem, calc(0.95rem + 1vw), 2rem),
     "xs":clamp(.7rem, calc(.7rem + 1vw), 1rem)
 );
 
