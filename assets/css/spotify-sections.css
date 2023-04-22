@@ -228,6 +228,19 @@ body {
   z-index: 200;
   background: transparent;
 }
+.spotify-main-header__description--solid {
+  transition: transform 0.5s;
+}
+.spotify-main-header__description--solid:hover {
+  border-bottom-width: 0.9rem;
+  border-left-width: 0.9rem;
+  border-right-width: 0.1rem;
+  border-top-width: 0.2rem;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-right-style: solid;
+  border-left-style: solid;
+}
 .spotify-main-header__img {
   height: var(--spotify-card-img-xl);
   width: var(--spotify-card-img-xl);
@@ -399,6 +412,10 @@ body {
   height: var(--spotify-card-img-sm);
   width: var(--spotify-card-img-sm);
 }
+.spotify-main-music__play-card-content-img--lg {
+  height: calc(var(--spotify-card-img-md) + 0.99rem);
+  width: var(--spotify-card-img-lg);
+}
 .spotify-main-music__play-card-content-picture {
   width: -moz-fit-content;
   width: fit-content;
@@ -485,9 +502,6 @@ body {
 }
 .spotify-main-music__play-card--solid {
   background: transparent;
-}
-.spotify-main-music__play-card--solid:hover {
-  background: var(--spotify-gray-card-semiwhite);
 }
 .spotify-main-music__about {
   min-width: 20rem;

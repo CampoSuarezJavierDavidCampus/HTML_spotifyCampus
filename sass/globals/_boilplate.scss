@@ -203,6 +203,21 @@ body{
                 background: transparent;
             }
 
+            &__description--solid{
+                transition: transform .5s;
+                &:hover{
+                    border-bottom-width:.9rem;
+                    border-left-width:.9rem;
+                    border-right-width: .1rem;
+                    border-top-width:.2rem ;
+                    border-top-style: solid;
+                    border-bottom-style: solid;
+                    border-right-style: solid;
+                    border-left-style: solid;
+                    
+                }
+            }
+
             &__img{
                 height: var(--spotify-card-img-xl);
                 width: var(--spotify-card-img-xl);
@@ -411,6 +426,10 @@ body{
                         &-img{
                             height: var(--spotify-card-img-sm);
                             width: var(--spotify-card-img-sm);
+                            &--lg{
+                                height: calc(var(--spotify-card-img-md) + .99rem);
+                                width: var(--spotify-card-img-lg);                            
+                            }
                         }
                         &-picture{                            
                             width:fit-content;
@@ -425,8 +444,7 @@ body{
                             font-size: var(--spotify-font-xs);
                             color: var(--spotify-white-text);
                             
-                        }
-
+                        }                        
                         &-title{                            
                             display: flex;
                             flex-direction: row-reverse;
@@ -507,13 +525,7 @@ body{
                     }
 
                     &--solid{
-                        background: transparent;
-                        &:hover{
-                            background: var(--spotify-gray-card-semiwhite);
-                        }
-                        & .potify-main-music__play-card-content-img {
-                            
-                        }
+                        background: transparent;                                                
                     }
                 }
             }
