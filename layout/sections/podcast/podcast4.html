@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>        
+    <link rel="stylesheet" href="../../../assets/css/bootstrap_fontawesome.css">
+    <link rel="stylesheet" href="../../../assets/css/spotify-sections.css">
+    <link rel="icon" href="../../../assets/images/globals/Spotify_icon.svg.png">
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="../../../assets/js/bootstrap/bootstrap.min.js"></script>       
+</head>
+<body>
+    <header class="spotify-header navbar py-3 bg-black px-2 px-md-4 row p-0 m-0 justify-content-between align-items-center">
+        <a href="../../../index.html" class="spotify-header-navbar__brand navbar-brand d-none d-sm-inline d-md-none fs-1 text-white border-end border-2 pe-4">
+            <i class="spotify-header-navbar__brand-icon fa-brands fa-spotify "></i> 
+            <span class="spotify-header-navbar__brand-text d-none d-sm-inline fw-semibold">spotify</span>
+        </a>
+        <nav aria-label="Page navigation" class="spotify-header-navbar__navegation d-none d-lg-block p-0 px-1 m-0" >
+            <ul class="spotify-header-navbar__navegation-pagination pagination m-0">
+                <li class="spotify-header-navbar__navegation-pagination-page-item page-item">
+                    <a class="spotify-header-navbar__navegation-pag ination-page-link page-link rounded-end rounded-4 bg-dark text-white px-4 py-2 border-0 mx-1" href="../pages/podcast.html">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                </li>
+                <li class="spotify-header-navbar__navegation-pagination-page-item page-item">
+                    <a class="spotify-header-navbar__navegation-pagination-page-link page-link rounded-start rounded-4 bg-dark text-white px-4 py-2 border-0 mx-1" href="#">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </li>
+            </ul>
+          </nav>
+        <nav class="spotify-header-navbar__nav col col-lg-8 col-xl-6">
+            <ul class="spotify-header-navbar__nav-list nav d-flex justify-content-end align-items-center">
+                <li class="spotify-header-navbar__nav-list-item spotify-header-navbar__nav-list-item--link nav-item px-0 py-2 fs-5 text-capitalize d-none d-lg-block">
+                    <a href="index.html" class="spotify-header-navbar__nav-list-link">upgrade</a>
+                </li>
+                <li class="spotify-header-navbar__nav-list-item spotify-header-navbar__nav-list-item--user px-3 rounded-pill border-1 border border-white mx-3 d-flex align-items-center fs-5 justify-content-center rounded-0 py-1">
+                    <img src="../../../assets/images/globals/channels4_profile.jpg" class="spotify-header-navbar__nav-list-item--user-icon rounded-circle" alt="">
+                    <button class="spotify-header-navbar__nav-list-item--user-button ">CampusLand</button>
+                </li>                
+            </ul>
+        </nav>      
+        <a class="spotify-header-navbar__menu btn btn-primary d-lg-none" href="#spotifyAsideHeader">
+            <i class="fa-solid fa-bars"></i>
+        </a> 
+    </header>
+
+
+    <main class="spotify-main">
+        <section class="spotify-main-container pt-lg-4 px-sm-4 row m-0">
+            <header class="spotify-main-header  p-0 row m-0 mb-2" style="background:rgb(64, 136, 176);">
+                <div class="p-4 row">
+                    <img class="spotify-main-header__img p-0 me-2"  src="https://i.scdn.co/image/ab67656300005f1f3a3c35793a3da90570944712" alt="">
+                    <h1 class="spotify-main-header__title col text-capitalize  text-white py-4 lh-1 ">
+                        <small class="spotify-main-header__title-categoria fw-bold ">Podcast</small>
+                        <span class="spotify-main-header__title-author fw-bold lh-1 d-block">
+                            El Podcast de Marian Rojas Estapé
+                        </span>
+                        <a class="spotify-main-header__title-studio spotify-main-header__title-studio-link lh-1 pe-2 fw-bold pt-4 fs-3" href="#">
+                            Marian Rojas Estapé
+                        </a>                    
+                    </h1>       
+                </div>                         
+                <div class="spotify-main-header__description spotify-main-header__description--solid rounded-top mt-4 pb-5 border-black" >
+                    <form class="spotify-main-header__controls d-flex align-items-center flex-wrap pt-4">
+                        <button class="spotify-main-header__controls-button my-2  mx-1 spotify-main-header__controls-button--add spotify-main-header__controls-button--add-follow text-capitalize fw-bold fs-4 border border-white border-2 px-3 py-2 mx-2 text-white rounded-pill">
+                            follow
+                        </button> 
+                        <div class="spotify-main-header__controls-dropdown dropdown">
+                            <button class="spotify-main-header__controls-dropdown-button px-2 mx-4 fs-1 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                            <ul class="spotify-main-header__controls-dropdown-menu dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>        
+                              
+                    </form>     
+                    <div class="spotify-main-music__play-card spotify-main-music__play-card--solid mt-4 rounded-2"> 
+                        <div class="spotify-main-music__play-card-content m-0 col-xl-10 ">
+                            <p class="spotify-main-music__play-card-content-description">                                
+                                <small class="spotify-main-music__play-card-content-small text-capitalize ">up next</small>
+                                <strong class="spotify-main-music__play-card-content-title text-capitalize text-white">3x03 ¿Qué es ser PAS (Personas Altamente Sensibles)?</strong>
+                                Hay personas que tienen un nivel de alerta más alto de lo normal en lo referente a cómo perciben los estímulos y cómo los sientes. Son los denominados PAS, Personas Altamente Sensibles. En este episodio, Marian Rojas Estapé, nos ayuda a identificar a estas personas. Y, además, nos ofrece consejos y tips para entenderlas mejor o en caso de que tú seas una de ellas, entender cómo afecta ser PAS en tu día a día.Para la doctora, ser PAS es un don si sabes cultivarlo y gestionarlo. Y nos enseñará cómo deben canalizar los PAS este don en sus relaciones con otras personas para así no sentirse vulnerables. Esperamos que lo disfrutes y lo compartas con quien más lo necesite. El Podcast de Marian Rojas Estapé, es un podcast en exclusiva en Spotify. Learn more about your ad choices. Visit podcastchoices.com/adchoices
+                            </p>
+                        </div> 
+                        <ul class="spotify-main-music__play-card-options d-flex align-items-center col-12 p-0 px-2 m-0 flex-wrap justify-content-between mb-3">
+                            <li class="spotify-main-iframe spotify-main-music__play-card-options-button col px-3 py-1 me-4">
+                                <iframe style="border-radius:12px" src="../../iframes/podcast/tiktok/capitulo1.html" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>  
+                            </li>
+                            <li class="spotify-main-music__play-card-options-button spotify-main-music__play-card-options-button--hidden px-3 py-1 rounded-pill mt-2">
+                                <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </a>
+                                <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                    <i class="fa-solid fa-circle-plus"></i>
+                                </a>
+                                <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                    <i class="fa-solid fa-share-from-square"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>            
+                </div>              
+            </header>
+            <article class="spotify-main-music row flex-wrap-reverse p-0 m-0 mt-5">
+                <div class="spotify-main-music__play col-xl-7 px-4 ">
+                    <h4 class="spotify-main-music__categorias fs-2 fw-bold text-white my-4">All Episodes</h4>                    
+                    <div class="spotify-main-music__play-list mb-4">
+                        <div class="spotify-main-music__play-card spotify-main-music__play-card--list mb-4"> 
+                            <div class="spotify-main-music__play-card-content m-0 col-xl-10 ">
+                                <p class="spotify-main-music__play-card-content-description spotify-main-music__play-card-content-description--short mt-2">
+                                    <img class="spotify-main-music__play-card-content-img  rounded-2 float-start mx-3" src="https://i.scdn.co/image/ab6765630000f68d7b655df0be66d24cfb4c64e3" alt="">                                    
+                                    <strong class="spotify-main-music__play-card-content-title text-capitalize text-white">Tráiler - Cómo hacer que te pasen cosas buenas</strong>En esta temporada Marian Rojas, nos hablará de las emociones, del cortisol, de la culpa y la depresión.Una temporada dónde vamos a conocernos más a nosotros mismos para poder ser más felices y de esa manera hacer que te pasen cosas buenas. Learn more about your ad choices. Visit podcastchoices.com/adchoices
+                                </p>
+                            </div> 
+                            <ul class="spotify-main-music__play-card-options d-flex align-items-center col-12 p-0 px-2 m-0 flex-wrap justify-content-between">
+                                <li class="spotify-main-iframe spotify-main-music__play-card-options-button col px-3 py-1 me-4">
+                                    <iframe style="border-radius:12px" src="../../iframes/podcast/tiktok/capitulo2.html?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                </li>
+                                <li class="spotify-main-music__play-card-options-button spotify-main-music__play-card-options-button--hidden px-3 py-1 rounded-pill mt-2">
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                    </a>
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-share-from-square"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="spotify-main-music__play-list mb-4">
+                        <div class="spotify-main-music__play-card spotify-main-music__play-card--list mb-4"> 
+                            <div class="spotify-main-music__play-card-content m-0 col-xl-10 ">
+                                <p class="spotify-main-music__play-card-content-description spotify-main-music__play-card-content-description--short mt-2">
+                                    <img class="spotify-main-music__play-card-content-img  rounded-2 float-start mx-3" src="https://i.scdn.co/image/ab6765630000f68d7b655df0be66d24cfb4c64e3" alt="">                                    
+                                    <strong class="spotify-main-music__play-card-content-title text-capitalize text-white">2x05 Vivir instalado en el pasado: la culpa y la depresión</strong>Los que viven enganchados en el pasado son los depresivos, los neuróticos, los resentidos, los que viven angustiados por el futuro, solos, ansiosos.Depresión y ansiedad son las dos grandes enfermedades del siglo XXI. El 90% de las cosas que nos preocupan nunca suceden. Pero nuestro cuerpo y nuestra mente lo viven como si fueran reales.En este episodio del podcast, Marian Rojas Estapé nos habla de vivir en el pasado y la culpa y tristeza que nos puede traer esta situación. Learn more about your ad choices. Visit podcastchoices.com/adchoices
+                                </p>
+                            </div> 
+                            <ul class="spotify-main-music__play-card-options d-flex align-items-center col-12 p-0 px-2 m-0 flex-wrap justify-content-between">
+                                <li class="spotify-main-iframe spotify-main-music__play-card-options-button col px-3 py-1 me-4">
+                                    <iframe style="border-radius:12px" src="../../iframes/podcast/tiktok/capitulo3.html?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                </li>
+                                <li class="spotify-main-music__play-card-options-button spotify-main-music__play-card-options-button--hidden px-3 py-1 rounded-pill mt-2">
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                    </a>
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-share-from-square"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="spotify-main-music__play-list mb-4">
+                        <div class="spotify-main-music__play-card spotify-main-music__play-card--list mb-4"> 
+                            <div class="spotify-main-music__play-card-content m-0 col-xl-10 ">
+                                <p class="spotify-main-music__play-card-content-description spotify-main-music__play-card-content-description--short mt-2">
+                                    <img class="spotify-main-music__play-card-content-img  rounded-2 float-start mx-3" src="https://i.scdn.co/image/ab6765630000f68d151534c41a1856ca91530d0d" alt="">                                    
+                                    <strong class="spotify-main-music__play-card-content-title text-capitalize text-white">1x06 Terapia vitamina 2</strong>La felicidad no es lo que nos pasa, sino cómo lo interpretamos. Uno de los problemas más frecuentes en el mundo emocional es aprender a expresar y comunicar de forma sana como uno se siente y entablar un intercambio fluido, para la superación de un apego inseguro.En terapia, enseño al paciente herramientas para aprender a expresar su malestar, su cariño o sus emociones y agresividad. Decir lo que piensa sin herir, pedir ayuda sin ser vulnerable, hablar sin gritar…También hablo de la voz interior, que refleja la actitud que tenemos ante los desafíos y retos y que tiene que servir para apoyarnos y no para hundirnos. En Encuentra tu persona vitamina te dejo un esquema para que te ayude a entender este concepto.Más información sobre Encuentra tu persona vitamina: https://www.planetadelibros.com/libro-encuentra-tu-persona-vitamina/329152Más sobre Marian Rojas Estapé Instagram https://www.instagram.com/marianrojasestape/?hl=es  YouTube https://www.youtube.com/channel/UCjz8dmJ0bl7OJhQCVw9lv9w Twitter https://twitter.com/drarojasestape?lang=es Facebook https://www.facebook.com/marianrojasestape/  Página web: https://marianrojas.com/Créditos:Guion y locución: Marian Rojas EstapéProducción: Editorial EspasaDirección: Sergio García JáñezGrabación: Margot MartínEdición: Sunne de Nación Podcast Learn more about your ad choices. Visit podcastchoices.com/adchoices
+                                </p>
+                            </div> 
+                            <ul class="spotify-main-music__play-card-options d-flex align-items-center col-12 p-0 px-2 m-0 flex-wrap justify-content-between">
+                                <li class="spotify-main-iframe spotify-main-music__play-card-options-button col px-3 py-1 me-4">
+                                    <iframe style="border-radius:12px" src="../../iframes/podcast/tiktok/capitulo4.html?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                </li>
+                                <li class="spotify-main-music__play-card-options-button spotify-main-music__play-card-options-button--hidden px-3 py-1 rounded-pill mt-2">
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                    </a>
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-share-from-square"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="spotify-main-music__play-list mb-4">
+                        <div class="spotify-main-music__play-card spotify-main-music__play-card--list mb-4"> 
+                            <div class="spotify-main-music__play-card-content m-0 col-xl-10 ">
+                                <p class="spotify-main-music__play-card-content-description spotify-main-music__play-card-content-description--short mt-2">
+                                    <img class="spotify-main-music__play-card-content-img  rounded-2 float-start mx-3" src="https://i.scdn.co/image/ab6765630000f68d151534c41a1856ca91530d0d" alt="">                                    
+                                    <strong class="spotify-main-music__play-card-content-title text-capitalize text-white">1x02 La oxitocina</strong>En este episodio aprenderéis cómo funciona la oxitocina y cómo estimularla. A partir de una experiencia estresante en mi vida, me di cuenta de que la oxitocina puede ayudar a luchar contra el cortisol. La oxitocina es el símbolo bioquímico de la empatía que se encarga de la inteligencia emocional. El cortisol es la hormona que se activa en los momentos de alerta, de amenaza. Cuando una persona vive constantemente preocupada por algo, se intoxica de cortisol y eso nos impide que la oxitocina funcione de forma adecuada.Las personas vitaminas nos ayudan a reducir la angustia y, simplemente con un abrazo, nos vamos a sentir más confiados para enfrentarnos a ese desafío. Animo a leer el capítulo del “piel con piel”, el método con el que el recién nacido reconoce el olor de su madre y le ayuda a aliviar la angustia. Y un tema fundamental, que en momentos de COVID es clave puntualizar, es que tocarse es necesario para la supervivencia.Más información sobre Encuentra tu persona vitamina: https://www.planetadelibros.com/libro-encuentra-tu-persona-vitamina/329152Más sobre Marian Rojas Estapé Instagram https://www.instagram.com/marianrojasestape/?hl=es  YouTube https://www.youtube.com/channel/UCjz8dmJ0bl7OJhQCVw9lv9w Twitter https://twitter.com/drarojasestape?lang=es Facebook https://www.facebook.com/marianrojasestape/  Página web: https://marianrojas.com/Créditos:Guion y locución: Marian Rojas EstapéProducción: Editorial EspasaDirección: Sergio García JáñezGrabación: Margot MartínEdición: Sunne de Nación Podcast Learn more about your ad choices. Visit podcastchoices.com/adchoices
+                                </p>
+                            </div> 
+                            <ul class="spotify-main-music__play-card-options d-flex align-items-center col-12 p-0 px-2 m-0 flex-wrap justify-content-between">
+                                <li class="spotify-main-iframe spotify-main-music__play-card-options-button col px-3 py-1 me-4">                                    
+                                    <iframe style="border-radius:12px" src="../../iframes/podcast/tiktok/capitulo5.html?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                </li>
+                                <li class="spotify-main-music__play-card-options-button spotify-main-music__play-card-options-button--hidden px-3 py-1 rounded-pill mt-2">
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                    </a>
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-share-from-square"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="spotify-main-music__play-list mb-4">
+                        <div class="spotify-main-music__play-card spotify-main-music__play-card--list mb-4"> 
+                            <div class="spotify-main-music__play-card-content m-0 col-xl-10 ">
+                                <p class="spotify-main-music__play-card-content-description spotify-main-music__play-card-content-description--short mt-2">
+                                    <img class="spotify-main-music__play-card-content-img  rounded-2 float-start mx-3" src="https://i.scdn.co/image/ab6765630000f68d7ca778eaaab33063654e4b2c" alt="">                                    
+                                    <strong class="spotify-main-music__play-card-content-title text-capitalize text-white">3x02 El Efecto de TikTok en nuestro cerebro</strong>¿Por qué pasamos horas y horas delante de la pantalla viendo vídeos de TikTok? ¿Cuáles son las consecuencias?Marian Rojas Estapé nos explica en este episodio cómo funciona la corteza prefrontal -el núcleo neurálgico de la fuerza de voluntad-, cómo se activa la dopamina y por qué estar tantas horas frente a la pantalla puede alterar nuestro sistema de recompensas.  Sabremos cuál es el secreto de esos vídeos cortos para conseguir atraparnos, y cuáles son sus efectos inmediatos y a largo plazo. La doctora nos dará también consejos para lograr una vida sin dependencia de las pantallas. Esperamos que lo disfrutes y lo compartas con quien más lo necesite. El Podcast de Marian Rojas Estapé, es un podcast en exclusiva en Spotify. Learn more about your ad choices. Visit podcastchoices.com/adchoices
+                                </p>
+                            </div> 
+                            <ul class="spotify-main-music__play-card-options d-flex align-items-center col-12 p-0 px-2 m-0 flex-wrap justify-content-between">
+                                <li class="spotify-main-iframe spotify-main-music__play-card-options-button col px-3 py-1 me-4">                                    
+                                    <iframe style="border-radius:12px" src="../../iframes/podcast/tiktok/capitulo6.html?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                </li>
+                                <li class="spotify-main-music__play-card-options-button spotify-main-music__play-card-options-button--hidden px-3 py-1 rounded-pill mt-2">
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                    </a>
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-share-from-square"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="spotify-main-music__play-list mb-4">
+                        <div class="spotify-main-music__play-card spotify-main-music__play-card--list mb-4"> 
+                            <div class="spotify-main-music__play-card-content m-0 col-xl-10 ">
+                                <p class="spotify-main-music__play-card-content-description spotify-main-music__play-card-content-description--short mt-2">
+                                    <img class="spotify-main-music__play-card-content-img  rounded-2 float-start mx-3" src="https://i.scdn.co/image/ab6765630000f68d7ca778eaaab33063654e4b2c" alt="">                                    
+                                    <strong class="spotify-main-music__play-card-content-title text-capitalize text-white">3x01 Cómo conseguir tu mejor versión</strong>Marian Rojas Estapé nos invita en este episodio a reflexionar sobre nuestro proyecto vital para comprender qué necesitamos, cuáles son nuestras virtudes y cuáles son nuestras carencias y qué podemos hacer para mejorarlo. A través de “una ecuación matemática” que relaciona conocimientos, voluntad, proyecto de vida y pasión, vas a poder identificar qué debes trabajar para lograr obtener tu mejor versión.  La doctora Marian Rojas Estapé nos da claves que nos ayudarán a conectar con nuestro interior, a conocernos más y a reforzar aquellos aspectos que necesiten un impulso para lograr alcanzar todas nuestras metas. Esperamos que lo disfrutes y lo compartas con quien más lo necesite. El Podcast de Marian Rojas Estapé, es un podcast en exclusiva en Spotify. Learn more about your ad choices. Visit podcastchoices.com/adchoices
+                                </p>
+                            </div> 
+                            <ul class="spotify-main-music__play-card-options d-flex align-items-center col-12 p-0 px-2 m-0 flex-wrap justify-content-between">
+                                <li class="spotify-main-iframe spotify-main-music__play-card-options-button col px-3 py-1 me-4">                                    
+                                    <iframe style="border-radius:12px" src="../../iframes/podcast/tiktok/capitulo7.html?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                </li>
+                                <li class="spotify-main-music__play-card-options-button spotify-main-music__play-card-options-button--hidden px-3 py-1 rounded-pill mt-2">
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </a>
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                    </a>
+                                    <a class="spotify-main-music__play-card-options-button-link me-4    text-capitalize fw-bold" href="#">
+                                        <i class="fa-solid fa-share-from-square"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a class="spotify-main-music__categorias fs-2 fw-bold text-white my-4 " href="#">· See More Episodes</a>
+                </div>
+                <div class="spotify-main-music__about col-12 col-xl-4 " >
+                    <h4 class="spotify-main-music__about-title text-black fs-2 fw-light text-capitalize px-3">About</h4>
+                    <p class="spotify-main-music__about-description px-3 " id="spotify-main-music__about-description">
+                        Marian Rojas Estapé, médico y psiquiatra, nos ayuda en este podcast a entender aquellos aspectos fundamentales que afectan cada día a nuestra salud física y mental. Comprender e
+                    </p>
+                    <a class="spotify-main-music__about-see spotify-main-music__about-see--more" href="#spotify-main-music__about-description">... see more</a>
+                    <ul class="spotify-main-music__about-options row flex-wrap p-2">
+                        <li class="spotify-main-music__about-options-button px-3 py-1 mx-3 rounded-pill text-capitalize rounded-pill">
+                            <a class="spotify-main-music__about-options-button-link text-white   text-capitalize fw-light" href="#">
+                                Health
+                            </a>
+                        </li>
+                        <li class="spotify-main-music__about-options-button px-3 py-1 mx-3 rounded-pill text-capitalize rounded-pill">
+                            <a class="spotify-main-music__about-options-button-link text-white   text-capitalize fw-light" href="#">
+                                Self-help
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+            <article class="spotify-main-section mt-5">
+                <h3 class="spotify-main-section-title text-white fw-bold fs-4 text-capitalize">
+                    top podcast
+                    <a class="spotify-main-section-title-link--small px-4 text-white fw-light" href="../pages/podcast.html">show all</a>
+                </h3>
+                <div class="spotify-main-post-office spotify-main-post-office--fit ">
+                    <a href="podcast1.html" class="spotify-main-post-office__card card spotify-main-post-office__card--fit rounded-3 m-2 py-3  border-0">
+                        <img class="spotify-main-post-office__card-img-fit" src="https://i.scdn.co/image/ab67656300005f1fb28f6aca16330d3e4a344641" alt="internet me arruinó">
+                         <span class="spotify-main-post-office__card-body card-body px-0">
+                            <strong class="spotify-main-post-office__card-body-title card-title fs-6 fw-bold m-0 text-white text-capitalize px-3">internet me arruinó</strong>
+                            <span class="spotify-main-post-office__card-body-author fw-light fs-6 text-capitalize px-3">apr 2 · 90 Min</span>
+                        </span>
+                    </a>
+                    <a href="podcast2.html" class="spotify-main-post-office__card card spotify-main-post-office__card--fit rounded-3 m-2 py-3  border-0">
+                        <img class="spotify-main-post-office__card-img-fit" src="https://i.scdn.co/image/ab67656300005f1f67c7a2b2bc53bab7908c992b" alt="Gilinski Vs. GEA: round para los paisas, pero...">
+                         <span class="spotify-main-post-office__card-body card-body px-0">
+                            <strong class="spotify-main-post-office__card-body-title card-title px-3 fs-6 fw-bold m-0 text-white text-capitalize">Gilinski Vs. GEA: round para los paisas, pero...</strong>
+                            <span class="spotify-main-post-office__card-body-author fw-light fs-6 text-capitalize px-3">apr 17 · 48 Min</span>
+                        </span>
+                    </a> 
+                    <a href="podcast3.html" class="spotify-main-post-office__card card spotify-main-post-office__card--fit rounded-3 m-2 py-3  border-0">
+                        <img class="spotify-main-post-office__card-img-fit" src="https://i.scdn.co/image/ab67656300005f1f74631700e0a884f6b774ff83" alt="un embarazo sorpresa">
+                         <span class="spotify-main-post-office__card-body card-body px-0">
+                            <strong class="spotify-main-post-office__card-body-title card-title fs-6 fw-bold m-0 text-white text-capitalize px-3">un embarazo sorpresa</strong>
+                            <span class="spotify-main-post-office__card-body-author fw-light fs-6 text-capitalize px-3">apr 13 · 23 Min</span>
+                        </span>
+                    </a>
+                    <a href="podcast5.html" class="spotify-main-post-office__card card spotify-main-post-office__card--fit rounded-3 m-2 py-3  border-0">
+                        <img class="spotify-main-post-office__card-img-fit" src="https://i.scdn.co/image/ab67656300005f1f02cdada849659a40ccb53945" alt="Entrevistamos a un VAMPIRO REAL 🧛🏽‍♂️">
+                         <span class="spotify-main-post-office__card-body card-body px-0">
+                            <strong class="spotify-main-post-office__card-body-title card-title px-3 fs-6 fw-bold m-0 text-white text-capitalize">Entrevistamos a un VAMPIRO REAL 🧛🏽‍♂️</strong>
+                            <span class="spotify-main-post-office__card-body-author fw-light fs-6 text-capitalize px-3">apr 12 · 57 Min</span>
+                        </span>
+                    </a>                     
+                </div>            
+            </article>
+            <footer class="spotify-main-footer d-flex justify-content-evenly align-items-start flex-wrap pt-5 mt-5">
+                <dl class="spotify-main-footer__categorias d-flex flex-column d-lg-grid col">
+                    <dt class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--start spotify-main-footer__categorias-item--title text-white fw-bold fs-3 text-capitalize my-3">
+                        company
+                    </dt>
+                    <dd class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--start fw-semibold fs-6 text-capitalize m-0 mb-1">
+                        <a href="#" class="spotify-main-footer__categorias-item-link">about</a>
+                    </dd>
+                    <dd class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--start fw-semibold fs-6 text-capitalize m-0 mb-1">
+                        <a href="#" class="spotify-main-footer__categorias-item-link">jobs</a>
+                    </dd>
+                    <dd class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--start fw-semibold fs-6 text-capitalize m-0 mb-1">
+                        <a href="#" class="spotify-main-footer__categorias-item-link">for the record</a>
+                    </dd>
+                    <dt class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--middle spotify-main-footer__categorias-item--title text-white fw-bold fs-3 text-capitalize my-3">
+                        communities
+                    </dt>
+                    <dd class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--middle fw-semibold fs-6 text-capitalize m-0 mb-1">
+                        <a href="#" class="spotify-main-footer__categorias-item-link">for artists</a>
+                    </dd>
+                    <dd class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--middle fw-semibold fs-6 text-capitalize m-0 mb-1">
+                        <a href="#" class="spotify-main-footer__categorias-item-link">developers</a>
+                    </dd>
+                    <dd class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--middle fw-semibold fs-6 text-capitalize m-0 mb-1">
+                        <a href="#" class="spotify-main-footer__categorias-item-link">adverstising</a>
+                    </dd>
+                    <dd class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--middle fw-semibold fs-6 text-capitalize m-0 mb-1">
+                        <a href="#" class="spotify-main-footer__categorias-item-link">vendors</a>
+                    </dd>
+                    <dt class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--end spotify-main-footer__categorias-item--title text-white fw-bold fs-3 text-capitalize my-3">
+                        Useful links
+                    </dt>
+                    <dd class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--end fw-semibold fs-6 text-capitalize m-0 mb-1">
+                        <a href="#" class="spotify-main-footer__categorias-item-link">support</a>
+                    </dd>
+                    <dd class="spotify-main-footer__categorias-item spotify-main-footer__categorias-item--end fw-semibold fs-6 text-capitalize m-0 mb-1">
+                        <a href="#" class="spotify-main-footer__categorias-item-link">free mobile app</a>
+                    </dd>                    
+                </dl>
+                <ul class="spotify-main-footer__redes col-3 d-flex justify-content-evenly flex-column flex-lg-row ">
+                    <li class="spotify-main-footer__redes-item rounded-pill mt-2">
+                        <a href="https://www.instagram.com/spotify/" class="spotify-main-footer__redes-item-link fs-3 text-black"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li class="spotify-main-footer__redes-item rounded-pill mt-2">
+                        <a href="https://twitter.com/spotify" class="spotify-main-footer__redes-item-link fs-3 text-black"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li class="spotify-main-footer__redes-item rounded-pill mt-2">
+                        <a href="https://www.facebook.com/Spotify" class="spotify-main-footer__redes-item-link fs-3 text-black"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                </ul>
+                <h6 class="spotify-main-footer__copyright col-12 pt-3 ps-3">
+                    <small class="spotify-main-footer__copyright-small">© 2023 spotify AB</small>
+                </h6>
+            </footer>
+        </section>
+    </main>    
+    <aside class="spotify-aside" id="spotifyAsideHeader" >
+        <div class="spotify-aside__container pt-0 d-flex flex-column align-items-center px-4 pt-5 mt-2">
+            <a class="spotify-aside__logo">            
+                <svg viewBox="0 0 1134 340" class="logo-svg">
+                    <title>Spotify</title>
+                    <path
+                        fill="currentColor"
+                        d="M8 171c0 92 76 168 168 168s168-76 168-168S268 4 176 4 8 79 8 171zm230 78c-39-24-89-30-147-17-14 2-16-18-4-20 64-15 118-8 162 19 11 7 0 24-11 18zm17-45c-45-28-114-36-167-20-17 5-23-21-7-25 61-18 136-9 188 23 14 9 0 31-14 22zM80 133c-17 6-28-23-9-30 59-18 159-15 221 22 17 9 1 37-17 27-54-32-144-35-195-19zm379 91c-17 0-33-6-47-20-1 0-1 1-1 1l-16 19c-1 1-1 2 0 3 18 16 40 24 64 24 34 0 55-19 55-47 0-24-15-37-50-46-29-7-34-12-34-22s10-16 23-16 25 5 39 15c0 0 1 1 2 1s1-1 1-1l14-20c1-1 1-1 0-2-16-13-35-20-56-20-31 0-53 19-53 46 0 29 20 38 52 46 28 6 32 12 32 22 0 11-10 17-25 17zm95-77v-13c0-1-1-2-2-2h-26c-1 0-2 1-2 2v147c0 1 1 2 2 2h26c1 0 2-1 2-2v-46c10 11 21 16 36 16 27 0 54-21 54-61s-27-60-54-60c-15 0-26 5-36 17zm30 78c-18 0-31-15-31-35s13-34 31-34 30 14 30 34-12 35-30 35zm68-34c0 34 27 60 62 60s62-27 62-61-26-60-61-60-63 27-63 61zm30-1c0-20 13-34 32-34s33 15 33 35-13 34-32 34-33-15-33-35zm140-58v-29c0-1 0-2-1-2h-26c-1 0-2 1-2 2v29h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v58c0 23 11 35 34 35 9 0 18-2 25-6 1 0 1-1 1-2v-21c0-1 0-2-1-2h-2c-5 3-11 4-16 4-8 0-12-4-12-12v-54h30c1 0 2-1 2-2v-22c0-1-1-2-2-2h-30zm129-3c0-11 4-15 13-15 5 0 10 0 15 2h1s1-1 1-2V93c0-1 0-2-1-2-5-2-12-3-22-3-24 0-36 14-36 39v5h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v89c0 1 1 2 2 2h26c1 0 1-1 1-2v-89h25l37 89c-4 9-8 11-14 11-5 0-10-1-15-4h-1l-1 1-9 19c0 1 0 3 1 3 9 5 17 7 27 7 19 0 30-9 39-33l45-116v-2c0-1-1-1-2-1h-27c-1 0-1 1-1 2l-28 78-30-78c0-1-1-2-2-2h-44v-3zm-83 3c-1 0-2 1-2 2v113c0 1 1 2 2 2h26c1 0 1-1 1-2V134c0-1 0-2-1-2h-26zm-6-33c0 10 9 19 19 19s18-9 18-19-8-18-18-18-19 8-19 18zm245 69c10 0 19-8 19-18s-9-18-19-18-18 8-18 18 8 18 18 18zm0-34c9 0 17 7 17 16s-8 16-17 16-16-7-16-16 7-16 16-16zm4 18c3-1 5-3 5-6 0-4-4-6-8-6h-8v19h4v-6h4l4 6h5zm-3-9c2 0 4 1 4 3s-2 3-4 3h-4v-6h4z"
+                    ></path>
+                </svg>                
+            </a>
+            <nav class="spotify-aside__nav pt-2 px-2">                                   
+                <ul class="spotify-aside__nav-main p-0">
+                    <li class="spotify-aside__nav-main-item">
+                        <a class="spotify-aside__nav-main-item-link fw-light fs-4" href="../../../index.html">
+                            <i class="mx-2 fa-solid fa-house"></i>
+                            inicio
+                        </a>
+                    </li>
+                    <li class="spotify-aside__nav-main-item">
+                        <a class="spotify-aside__nav-main-item-link fw-light fs-4 " href="../pages/browers.html">
+                            <i class="mx-2 fa-solid fa-magnifying-glass"></i>
+                            Buscar
+                        </a>
+                    </li>
+                    <li class="spotify-aside__nav-main-item">
+                        <a class="spotify-aside__nav-main-item-link fw-light fs-4 " href="../user/library.html">
+                            <i class="mx-2 fa-regular fa-rectangle-list"></i>
+                            Tu Biblioteca
+                        </a>
+                    </li>
+                </ul>
+                <div class="spotify-aside__nav-options d-flex flex-column align-items-start mt-4">
+                    <a href="../user/add.html" class="spotify-aside__nav-options-button spotify-aside__nav-options-button--create my-1 border-0 p-0 fs-5">
+                        <i class="spotify-aside__nav-options-button-icon spotify-aside__nav-options-button-icon--add fs-1 me-2 rounded-2 fa-solid fa-plus mb-2"></i>
+                        crear playlist
+                    </a>
+                    <a href="../user/songs.html" class="spotify-aside__nav-options-button spotify-aside__nav-options-button--favorite my-1 border-0 p-0 fs-5 text-wrap">
+                        <i class="spotify-aside__nav-options-button-icon spotify-aside__nav-options-button-icon--love fs-5 me-2 rounded-2 fa-solid fa-heart"></i>
+                        canciones que te gustan
+                    </a>
+                </div>
+                <div class="spotify-aside__nav-legal">
+                    <div class="spotify-aside__nav-legal-links d-flex flex-wrap mb-2">
+                        <a class="spotify-aside__nav-legal-links-item text-capitalize m-2 fs-6 fw-light" href="#">
+                            legal
+                        </a>
+                        <a class="spotify-aside__nav-legal-links-item text-capitalize m-2 fs-6 fw-light" href="#">
+                            privacity Center
+                        </a>
+                        <a class="spotify-aside__nav-legal-links-item text-capitalize m-2 fs-6 fw-light" href="#">
+                            privacity policy
+                        </a>                        
+                        <a class="spotify-aside__nav-legal-links-item text-capitalize m-2 fs-6 fw-light" href="https://www.spotify.com/ec/legal/cookies-policy/">
+                            Cookies
+                        </a>
+                        <a class="spotify-aside__nav-legal-links-item text-capitalize m-2 col-12 fs-6 fw-light" href="#">
+                            about us
+                        </a>
+                        <a class="spotify-aside__nav-legal-links-item text-capitalize m-2 fs-6 col-12 fw-light" href="#">
+                            cookies
+                        </a>
+                    </div>
+    
+                    <button class="spotify-aside__nav-legal-button border border-1 border-white rounded-pill px-2 py-1 text-white text-capitalize">        
+                        <i class="fa-solid fa-globe"></i>                
+                        Español de latinoamerica
+                    </button>
+                </div>
+            </nav> 
+        </div>
+        <a class="spotify-aside-close d-lg-none px-4 text-black" href="#">X Cerrar</a>       
+    </aside>
+    <footer class="spotify-footer"></footer>
+</body>
+</html>

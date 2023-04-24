@@ -32,9 +32,6 @@ body{
 
             &__menu{
                 width: fit-content;
-                &:target{
-                    
-                }
             }
 
             &__nav{
@@ -49,7 +46,32 @@ body{
                                 color: var(--bs-white);
                             }
                         }
-        
+                        &--user{
+                            &-icon{
+                                height: 2rem;
+                                width: 2rem;
+                            }                            
+                            &-button{
+                                border: none;
+                                background: transparent;
+                                color: var(--spotify-white-text);
+                                display: flex;
+                                align-items: center;
+                                &::after{
+                                    content: "";
+                                    width: 0; 
+                                    height: 0; 
+                                    border-right: .4rem solid transparent;
+                                    border-top: .7rem solid var(--bs-white);
+                                    border-left: .4rem solid transparent;                                     
+                                    margin-inline-start: .1rem;
+                                }
+                                &:hover{
+                                    color: var(--bs-white);
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
                     }
         
                     &-link{
@@ -154,14 +176,58 @@ body{
                     &--shadow{
                         box-shadow:0 0 .9rem .2rem rgba(0, 0, 0, 0.8)
                     }
-                }   
+                }                   
                 
                 &-body{
+                    &-title, &-author{
+                        width: 100%;                            
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        line-clamp: 1;
+                        -webkit-box-orient: vertical;  
+                        overflow: hidden;
+                    }
                     &-author{
                         font-size: 1rem;
                         color:var(--spotify-gray-text);
                     }
                 }
+            }
+        }
+        //iframe
+        &-iframe{       
+            margin-bottom: .5rem;              
+            position: relative;
+            width: 75%;
+            max-width: 60rem;
+            height: 7rem; 
+            min-width: 16.3rem;              
+            background: transparent;
+            border-radius: 1rem;
+            overflow-y: hidden;
+            z-index: 2;
+            &::after{
+                content: "";
+                z-index: -100;
+                left:0;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                /* background: var(--spotify-gray-main); */
+            }
+            &:hover{                    
+                border-color: var(--spotify-gray-card);
+                border-bottom-width:.9rem;
+                border-left-width:.9rem;
+                border-right-width: .1rem;
+                border-top-width:.2rem ;
+                border-top-style: solid;
+                border-bottom-style: solid;
+                border-right-style: solid;
+                border-left-style: solid;
+            }
+            & iframe{
+                position: relative;                
             }
         }
         //section
@@ -222,6 +288,41 @@ body{
                 height: var(--spotify-card-img-xl);
                 width: var(--spotify-card-img-xl);
                 box-shadow:0 0 .9rem .2rem rgba(0, 0, 0, 0.8);
+                &--default{
+                    background: var(--spotify-gray-text);
+                    font-size: calc(var(--spotify-font-lg) + 5rem);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative; 
+
+                    &-love{
+                        font-size: calc(var(--spotify-font-lg) + 9rem);
+                        background: linear-gradient(135deg,#450af5,#c4efd9 100%);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: var(--bs-white);
+                    }
+
+                    & .fa-pencil{
+                        display: none;
+                        &::after{
+                            content: "Choose photo";        
+                            display: block;                                            
+                            font-size: calc(var(--spotify-font-xs) + .4rem) ;
+                        }
+                    }
+
+                    &:hover {
+                        & .fa-music{
+                            display: none;                        
+                        }
+                        & .fa-pencil{
+                            display: block;
+                        }
+                    }
+                }                
             }
             &__title{
                 &-categoria, &-studio{
@@ -349,10 +450,38 @@ body{
                         }
                     }
                 }
+                &-search{
+                    &-close{
+                        color: var(--spotify-white-text);
+                        &:hover{
+                            color: var(--bs-white);
+                        }
+                    }
+                    &-label{
+                        background: var(--spotify-gray-card-semiwhite);
+                        &-input, &-text{
+                            color: var(--spotify-white-text);
+
+                            background: transparent;
+                            font-size: calc(var(--spotify-font-xs) + .8rem);
+                        }
+
+                        &-input{
+                            transition: background .3s  ;
+                            &:focus{
+                                background: var(--spotify-gray-card-active);
+                                box-shadow: 0 0 0 0 #000;
+                                color: var(--bs-white);
+                                &::placeholder{
+                                    color: var(--bs-white);
+                                }
+                            }
+                        }
+                    }
+                }
             }
             &__description{                
-                background: var(--spotify-gray-card-light);
-                border-bottom:solid .4rem  var(--spotify-gray-main);
+                background: var(--spotify-gray-card-light);                
                 &-nav{
                     &-item{
 
@@ -411,6 +540,29 @@ body{
         }
         //play list
         &-music{
+            &-liked{
+                height: 40rem;                                
+                background: linear-gradient(180deg, rgb(80, 56, 160) 0%, rgba(0,0,0,1) 92%);                
+                backdrop-filter: blur(4rem);
+                box-shadow:.3rem .7rem .9rem .2rem rgba(0, 0, 0, 0.8);
+                &-description{
+                    &-button{
+                        text-decoration: none ;
+                        background: white;
+                        height: 5rem ;
+                        width: fit-content;
+                        display: flex;
+                        align-items: center;
+                        margin-inline: auto;
+                        color: var(--bs-black);
+                        &:hover{
+                            transform: scale(1.06);
+                            background: var(--spotify-gray-card-semiwhite);
+                            color: var(--bs-white);
+                        }
+                    }
+                }
+            }
             &__play{                
                 &-card{
                     background: var(--spotify-gray-card-light);
@@ -444,6 +596,10 @@ body{
                             font-size: var(--spotify-font-xs);
                             color: var(--spotify-white-text);
                             
+                        }   
+                        &-description--short{                                     
+                            -webkit-line-clamp: 4;
+                            line-clamp: 4;
                         }                        
                         &-title{                            
                             display: flex;
@@ -510,8 +666,7 @@ body{
                         }                        
                     }
                     
-                    &--list{
-                        border-top: solid .18rem var(--spotify-gray-card-active);
+                    &--list{                        
                         background: transparent;
                         transition: background .2s;
                         .spotify-main-music__play-card-content-small, .spotify-main-music__play-card-content-description{
@@ -519,24 +674,57 @@ body{
                             color: var(--spotify-white-text);
                             
                         }
+                        
                         &:hover{
                             background: var(--spotify-gray-card-active);
+                            border-color: var(--spotify-gray-card);
+                            border-bottom-width:.9rem;
+                            border-left-width:.9rem;
+                            border-right-width: .1rem;
+                            border-top-width:.2rem ;
+                            border-top-style: solid;
+                            border-bottom-style: solid;
+                            border-right-style: solid;
+                            border-left-style: solid;
                         }
                     }
 
                     &--solid{
-                        background: transparent;                                                
+                        background: transparent;                                      
                     }
-                }
+                }               
             }
 
             &__about{
                 min-width: 20rem;
                 &-title{
-                    background: linear-gradient(to left, var(--spotify-white-text) -10%,var(--spotify-gray-card-active) 60%,var(--spotify-gray-card));
+                    width: fit-content;
+                    background: var(--bs-white);
+
+                }
+                &-see{
+                    text-decoration: none;
+                    color: var(--bs-white);
+                    text-transform: capitalize;
+                    &:hover{
+                        color: var(--bs-primary);
+                    }
+                    &:target{
+                        opacity: 0;
+                    }
                 }
                 &-description{
+                    margin-bottom: .2rem;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 8;
+                    line-clamp: 8;
+                    -webkit-box-orient: vertical;  
+                    overflow: hidden;
+                    font-size: var(--spotify-font-xs);                    
                     color: var(--spotify-white-text);
+                    &:target{
+                        display:block;
+                    }
                 }
                 &-options{
                     list-style: none;
@@ -546,7 +734,7 @@ body{
                         width: fit-content;
                         background: var(--spotify-gray-card);
                         &-link{
-                            font-size: var(--spotify-font-md);
+                            font-size: calc(var(--spotify-font-MS) - .4rem);
                             text-decoration: none;
                         }
                         &:hover{
@@ -554,8 +742,8 @@ body{
                         }
                     }
                 }
-            }
-        }        
+            }            
+        }                
         //footer
         &-footer{
             &__categorias{
@@ -607,14 +795,54 @@ body{
     }
     &-footer{grid-area: footer}
     //aside
-    &-aside{        
+    &-aside{   
+
+        display: none;
         grid-area: aside;
         background:var(--bs-black);
+        width: 100vw;
+        &-close{
+            position: fixed;
+            top: 0;
+            right: 0;
+            font-size: var(--spotify-font-lg);
+            text-decoration: none;
+            background:var(--bs-white);
+            width:fit-content;
+            border-radius: 2rem 0 0 2rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: solid .5rem var(--bs-white);
+            z-index: 1600;
+            &:hover{
+                background: var(--spotify-white-text);
+            }
+        }
+        &:target{         
+            display: block;   
+            z-index: 1500;      
+            position: fixed;                               
+        }        
+        &::before{
+            content: "";
+            width: 100vw;
+            height: 100vh;
+            display: none;
+            z-index: -10;
+            background:var(--spotify-gray-main);
+            opacity: .8;
+            filter: blur(1rem);            
+            left: 0;
+            top: 0;
+        }
         &__container{
             position: sticky;
-        top: 0px;
-        height: 100vh;
-        z-index: 1000;
+            min-height: 40rem;
+            top: 0px;
+            height: 100vh;
+            z-index: 1000;
         }
         &__logo{
             display:block;
@@ -624,7 +852,9 @@ body{
                 height:3rem;
             }
         }
-        &__nav{            
+        &__nav{      
+            overflow-y: auto;
+            height: 85vh;
             &-main{
                 list-style: none;    
                 &-item{
@@ -661,9 +891,9 @@ body{
                     }
                 }
             }
-            &-legal{
-                position: absolute;
-                bottom: 2rem;
+            &-legal{      
+                max-width: 18rem;  
+                margin-top: 5rem;
                 &-links{                    
                     &-item{
                         text-decoration: none;
@@ -682,7 +912,7 @@ body{
                 }
             }
             
-        }        
+        }                
     }        
 }
 
