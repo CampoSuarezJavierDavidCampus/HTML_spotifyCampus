@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 @charset "UTF-8";
 /*----------  CARDS   ----------*/
 /* 
@@ -1071,6 +1072,8 @@ grid-breakpoints:
 =            MAIN TOP            =
 =============================================*/
 =======
+=======
+>>>>>>> samuel
 :root {
   --spotify-gray-main: #121212;
   --spotify-gray-text: #959595;
@@ -1290,5 +1293,8 @@ body {
 /*=============================================
 =            MAIN TOP            =
 =============================================*/
+<<<<<<< HEAD
 >>>>>>> 80c7faa (listo ya las mejoras estan)
+=======
+>>>>>>> samuel
 /*=====  End of MAIN TOP  ======*//*# sourceMappingURL=spotify-sections.css.map */
