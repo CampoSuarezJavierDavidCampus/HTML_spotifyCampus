@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 @charset "UTF-8";
 /*----------  CARDS   ----------*/
 /* 
@@ -1062,18 +1061,6 @@ grid-breakpoints:
   width: -moz-fit-content;
   width: fit-content;
 }
-
-/*=====  End of HEADER OFFCANVAS  ======*/
-/*=============================================
-=            MAIN BROWSER            =
-=============================================*/
-/*=====  End of MAIN BROWSER  ======*/
-/*=============================================
-=            MAIN TOP            =
-=============================================*/
-=======
-=======
->>>>>>> samuel
 :root {
   --spotify-gray-main: #121212;
   --spotify-gray-text: #959595;
@@ -1284,17 +1271,4 @@ body {
   width: -moz-fit-content;
   width: fit-content;
 }
-
-/*=====  End of HEADER OFFCANVAS  ======*/
-/*=============================================
-=            MAIN BROWSER            =
-=============================================*/
-/*=====  End of MAIN BROWSER  ======*/
-/*=============================================
-=            MAIN TOP            =
-=============================================*/
-<<<<<<< HEAD
->>>>>>> 80c7faa (listo ya las mejoras estan)
-=======
->>>>>>> samuel
 /*=====  End of MAIN TOP  ======*//*# sourceMappingURL=spotify-sections.css.map */
