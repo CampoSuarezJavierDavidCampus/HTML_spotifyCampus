@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @use 'mixins' as *;
 
 
@@ -87,3 +88,20 @@ $arrayColors: (
 @include varsCreate(spotify,$arrayColors);
 @include varsCreate(spotify-card-img,$card-img-size);
 @include varsCreate(spotify-card-height,$card-height-size);
+=======
+@use 'mixins' as *;
+$gray-main: #121212;
+$gray-text:#959595;
+$gray-card: #181818;
+$gray-card-active:#282828;
+
+
+$arrayColors: (
+    "gray-main":$gray-main,
+    "gray-text":$gray-text,
+    "gray-card":$gray-card,
+    "gray-card-active":$gray-card-active
+);
+
+@include varsCreate(spotify,$arrayColors)
+>>>>>>> 80c7faa (listo ya las mejoras estan)
