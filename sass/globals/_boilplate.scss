@@ -18,8 +18,7 @@ body{
     grid-template-rows: auto repeat(4,1fr) auto;
     grid-template-columns: auto repeat(3,1fr); 
 
-    overflow-x: hidden;      
-   
+    overflow-x: hidden;          
 }
 
 .spotify{
@@ -192,29 +191,37 @@ body{
                         height: 10rem;                                            
                     }
                 }
-        
-                &-img-small{
-                    height: 6.25rem;
-                    width: 6.25rem;
-                    position: absolute;
-                    right: -1.2rem;
-                    bottom: -.2rem;
-                    transform: rotate(25deg);
-                }   
-                &-img-fit{
-                    height: 9.25rem;
-                    width: 9.25rem;                                    
-                    &--shadow{
-                        box-shadow:0 0 .9rem .2rem rgba(0, 0, 0, 0.8)
+
+                &-img{
+                    
+
+                    &-small{
+                        object-fit: cover;
+                        height: 6.25rem;
+                        width: 6.25rem; 
+                        position: absolute;
+                        right: -1.2rem;
+                        bottom: -.2rem;
+                        transform: rotate(25deg);
+                    }   
+                    &-fit{
+                        object-fit: cover;
+                        height: 9.25rem;
+                        width: 9.25rem;                                    
+                        &--shadow{
+                            box-shadow:0 0 .9rem .2rem rgba(0, 0, 0, 0.8)
+                        }
+                    }                   
+                    &-default{                        
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: calc(var(--spotify-font-lg) + 5rem);
+                        color: var(--spotify-white-text);
                     }
-                }                   
-                &-img-default{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: calc(var(--spotify-font-lg) + 5rem);
-                    color: var(--spotify-white-text);
                 }
+        
+                
                 &-body{
                     &-title, &-author{
                         display: inline-block;
@@ -288,7 +295,54 @@ body{
             }
         }
         //section
-        &-section{           
+        &-section{                
+            &__music{
+                position: fixed;
+                z-index: 2000;
+                height: 100vh;
+                width: 100vw;
+                margin: 0;
+                padding: 0;
+                top: 0;                
+                left: 0;
+                background: transparent;                
+                backdrop-filter:blur(3rem);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;                                
+                visibility: hidden;
+                opacity: 0;
+                transition: opacity .6s;
+                &:target{
+                    visibility: visible;
+                    opacity:1;                    
+                }
+                &-container{
+                    width: 80vw;
+                    height: 60vh;
+                    background: var(--spotify-gray-card-semiwhite);
+                    border-radius: 1rem;
+                    box-shadow: 0 1.5rem 2rem .6rem #121212;
+                    display: flex;                    
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    padding: 3rem;                    
+                    order: 10;
+                }
+                &-close{
+                    font-size: var(--spotify-font-md);
+                    text-decoration: none;
+                    top: 0px;
+                    color: var(--spotify-white-text);
+                    margin-bottom: 2rem;                    
+                    &:hover,&:active{
+                        color: var(--bs-white);
+                        text-decoration: underline;
+                    }
+                }
+            }       
             &-title{
                 display: flex;
                 align-items: baseline;
