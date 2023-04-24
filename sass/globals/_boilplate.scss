@@ -18,8 +18,7 @@ body{
     grid-template-rows: auto repeat(4,1fr) auto;
     grid-template-columns: auto repeat(3,1fr); 
 
-    overflow-x: hidden;      
-   
+    overflow-x: hidden;          
 }
 
 .spotify{
@@ -32,9 +31,6 @@ body{
 
             &__menu{
                 width: fit-content;
-                &:target{
-                    
-                }
             }
 
             &__nav{
@@ -49,7 +45,32 @@ body{
                                 color: var(--bs-white);
                             }
                         }
-        
+                        &--user{
+                            &-icon{
+                                height: 2rem;
+                                width: 2rem;
+                            }                            
+                            &-button{
+                                border: none;
+                                background: transparent;
+                                color: var(--spotify-white-text);
+                                display: flex;
+                                align-items: center;
+                                &::after{
+                                    content: "";
+                                    width: 0; 
+                                    height: 0; 
+                                    border-right: .4rem solid transparent;
+                                    border-top: .7rem solid var(--bs-white);
+                                    border-left: .4rem solid transparent;                                     
+                                    margin-inline-start: .1rem;
+                                }
+                                &:hover{
+                                    color: var(--bs-white);
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
                     }
         
                     &-link{
@@ -72,6 +93,13 @@ body{
                     }
                 }
             }
+
+            &__navegation-pagination{
+                & .active{
+                    background: var(--bs-white) !important;                    
+                    color: var(--bs-black) !important;
+                }    
+            }
         }
         
     }
@@ -80,28 +108,38 @@ body{
         grid-area: main;
         background: var(--spotify-gray-main);        
         //post Office
-        &-post-office{  
-            
-            display: grid;
-            align-items: end;
-            justify-items: center;
-            overflow-y: hidden;
-            grid-template-columns: repeat(auto-fit,minmax(10.2rem,12rem));            
-            
-            &--fit{
+        &-post-office{              
+            &--expand{
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            &--fit{                
+                display: grid;
+                align-items: end;
+                justify-items: center;
+                overflow-y: hidden;                
+                grid-template-columns: repeat(auto-fit,minmax(10.2rem,12rem));
                 column-gap: 1rem;               
                 grid-template-rows: var(--spotify-card-height-xxl);
                 grid-auto-rows: 0px;
         
-            }
-            
-            &__card{                
+            }        
+            &__card{         
+                display: block;       
                 overflow-x: hidden;
                 overflow-y: hidden;
                 position: relative;
                 max-width: 12.5rem;    
-                width: 100%;            
+                min-width: 12.5rem; 
+
+                &--expand{                    
+                    height: 12rem;
+                    max-width: 100%;                    
+                }
+
                 &--fit{
+                    width: 100%;            
                     background: var(--spotify-gray-card);
                     display: flex;
                     align-items: center;
@@ -114,8 +152,12 @@ body{
                     &:hover figure figcaption,
                     &:active figure figcaption{
                         opacity: 1;
-                        bottom: .4rem;
-                    }
+                        bottom: .4rem;                        
+                    }                    
+                }
+
+                &--lg{
+                    max-width: 100%;    
                 }
         
                 &-figure{
@@ -137,35 +179,170 @@ body{
                         &:active{
                             transform: scale(1.1);
                         }
+
+                        &--lg{
+                            right: 2rem;
+                            bottom: -3.2rem;
+
+                        }
+                    }
+
+                    &--lg{
+                        height: 10rem;                                            
+                    }
+                }
+
+                &-img{
+                    
+
+                    &-small{
+                        object-fit: cover;
+                        height: 6.25rem;
+                        width: 6.25rem; 
+                        position: absolute;
+                        right: -1.2rem;
+                        bottom: -.2rem;
+                        transform: rotate(25deg);
+                    }   
+                    &-fit{
+                        object-fit: cover;
+                        height: 9.25rem;
+                        width: 9.25rem;                                    
+                        &--shadow{
+                            box-shadow:0 0 .9rem .2rem rgba(0, 0, 0, 0.8)
+                        }
+                    }                   
+                    &-default{                        
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: calc(var(--spotify-font-lg) + 5rem);
+                        color: var(--spotify-white-text);
                     }
                 }
         
-                &-img-small{
-                    height: 6.25rem;
-                    width: 6.25rem;
-                    position: absolute;
-                    right: -1.2rem;
-                    bottom: -.2rem;
-                    transform: rotate(25deg);
-                }   
-                &-img-fit{
-                    height: 9.25rem;
-                    width: 9.25rem;                                    
-                    &--shadow{
-                        box-shadow:0 0 .9rem .2rem rgba(0, 0, 0, 0.8)
-                    }
-                }   
                 
                 &-body{
+                    &-title, &-author{
+                        display: inline-block;
+                        width: 100%;                            
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        line-clamp: 1;
+                        -webkit-box-orient: vertical;  
+                        overflow: hidden;
+                    }
+                    &-title{
+                        &--expand{
+                            display: inline-block;
+                            overflow: visible;
+                        }             
+                        
+                        &--lg{
+                            font-size: calc(var(--spotify-font-lg) + 1rem) !important;
+                        }
+                    }
                     &-author{
                         font-size: 1rem;
                         color:var(--spotify-gray-text);
+                        &--lg{
+                            font-size: calc(var(--spotify-font-md) + .2rem) !important;
+                        }
+                    }
+
+                    &--lg{
+                        position: absolute;
+                        bottom: 1rem;
+                        left: 1rem;                        
                     }
                 }
             }
         }
+        //iframe
+        &-iframe{       
+            margin-bottom: .5rem;              
+            position: relative;
+            width: 75%;
+            max-width: 60rem;
+            height: 7rem; 
+            min-width: 16.3rem;              
+            background: transparent;
+            border-radius: 1rem;
+            overflow-y: hidden;
+            z-index: 2;
+            &::after{
+                content: "";
+                z-index: -100;
+                left:0;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                /* background: var(--spotify-gray-main); */
+            }
+            &:hover{                    
+                border-color: var(--spotify-gray-card);
+                border-bottom-width:.9rem;
+                border-left-width:.9rem;
+                border-right-width: .1rem;
+                border-top-width:.2rem ;
+                border-top-style: solid;
+                border-bottom-style: solid;
+                border-right-style: solid;
+                border-left-style: solid;
+            }
+            & iframe{
+                position: relative;                
+            }
+        }
         //section
-        &-section{           
+        &-section{                
+            &__music{
+                position: fixed;
+                z-index: 2000;
+                height: 100vh;
+                width: 100vw;
+                margin: 0;
+                padding: 0;
+                top: 0;                
+                left: 0;
+                background: transparent;                
+                backdrop-filter:blur(3rem);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;                                
+                visibility: hidden;
+                opacity: 0;
+                transition: opacity .6s;
+                &:target{
+                    visibility: visible;
+                    opacity:1;                    
+                }
+                &-container{
+                    width: 80vw;
+                    height: 60vh;
+                    background: var(--spotify-gray-card-semiwhite);
+                    border-radius: 1rem;
+                    box-shadow: 0 1.5rem 2rem .6rem #121212;
+                    display: flex;                    
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    padding: 3rem;                    
+                    order: 10;
+                }
+                &-close{
+                    font-size: var(--spotify-font-md);
+                    text-decoration: none;
+                    top: 0px;
+                    color: var(--spotify-white-text);
+                    margin-bottom: 2rem;                    
+                    &:hover,&:active{
+                        color: var(--bs-white);
+                        text-decoration: underline;
+                    }
+                }
+            }       
             &-title{
                 display: flex;
                 align-items: baseline;
@@ -203,10 +380,60 @@ body{
                 background: transparent;
             }
 
+            &__description--solid{
+                transition: transform .5s;
+                &:hover{
+                    border-bottom-width:.9rem;
+                    border-left-width:.9rem;
+                    border-right-width: .1rem;
+                    border-top-width:.2rem ;
+                    border-top-style: solid;
+                    border-bottom-style: solid;
+                    border-right-style: solid;
+                    border-left-style: solid;
+                    
+                }
+            }
+
             &__img{
                 height: var(--spotify-card-img-xl);
                 width: var(--spotify-card-img-xl);
                 box-shadow:0 0 .9rem .2rem rgba(0, 0, 0, 0.8);
+                &--default{
+                    background: var(--spotify-gray-text);
+                    font-size: calc(var(--spotify-font-lg) + 5rem);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative; 
+
+                    &-love{
+                        font-size: calc(var(--spotify-font-lg) + 9rem);
+                        background: linear-gradient(135deg,#450af5,#c4efd9 100%);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: var(--bs-white);
+                    }
+
+                    & .fa-pencil{
+                        display: none;
+                        &::after{
+                            content: "Choose photo";        
+                            display: block;                                            
+                            font-size: calc(var(--spotify-font-xs) + .4rem) ;
+                        }
+                    }
+
+                    &:hover {
+                        & .fa-music{
+                            display: none;                        
+                        }
+                        & .fa-pencil{
+                            display: block;
+                        }
+                    }
+                }                
             }
             &__title{
                 &-categoria, &-studio{
@@ -334,10 +561,38 @@ body{
                         }
                     }
                 }
+                &-search{
+                    &-close{
+                        color: var(--spotify-white-text);
+                        &:hover{
+                            color: var(--bs-white);
+                        }
+                    }
+                    &-label{
+                        background: var(--spotify-gray-card-semiwhite);
+                        &-input, &-text{
+                            color: var(--spotify-white-text);
+
+                            background: transparent;
+                            font-size: calc(var(--spotify-font-xs) + .8rem);
+                        }
+
+                        &-input{
+                            transition: background .3s  ;
+                            &:focus{
+                                background: var(--spotify-gray-card-active);
+                                box-shadow: 0 0 0 0 #000;
+                                color: var(--bs-white);
+                                &::placeholder{
+                                    color: var(--bs-white);
+                                }
+                            }
+                        }
+                    }
+                }
             }
             &__description{                
-                background: var(--spotify-gray-card-light);
-                border-bottom:solid .4rem  var(--spotify-gray-main);
+                background: var(--spotify-gray-card-light);                
                 &-nav{
                     &-item{
 
@@ -395,36 +650,68 @@ body{
             }
         }
         //play list
-        &-music{      
-            
-            
-            &__play{
-                
+        &-music{
+            &-liked{
+                height: 40rem;                                                                
+                backdrop-filter: blur(4rem);
+                box-shadow:.3rem .7rem .9rem .2rem rgba(0, 0, 0, 0.8);
+                &-description{
+                    &-button{
+                        text-decoration: none ;
+                        background: white;
+                        height: 5rem ;
+                        width: fit-content;
+                        display: flex;
+                        align-items: center;
+                        margin-inline: auto;
+                        color: var(--bs-black);
+                        transition: background .25s,transform .4s;
+                        &:hover{
+                            transform: scale(1.06);
+                            background: var(--spotify-gray-card-semiwhite);
+                            color: var(--bs-white);
+                        }
+                    }
+                }
+            }
+            &__play{                
                 &-card{
                     background: var(--spotify-gray-card-light);
                     display: flex;
-                    flex-wrap: wrap;
+                    flex-wrap: wrap;                    
                     
                     &:hover .spotify-main-music__play-card-options-button--hidden,
                     &:active .spotify-main-music__play-card-options-button--hidden{
                         transform: scale(1);
                     }        
 
-                    &-content{
+                    &-content{ 
                         &-img{
-                            height: var(--spotify-card-img-md);
-                            width: var(--spotify-card-img-md);
+                            height: var(--spotify-card-img-sm);
+                            width: var(--spotify-card-img-sm);
+                            &--lg{
+                                height: calc(var(--spotify-card-img-md) + .99rem);
+                                width: var(--spotify-card-img-lg);                            
+                            }
                         }
                         &-picture{                            
                             width:fit-content;
                         }
 
-                        &-small, &-description{
+                        &-small, &-description{         
+                            display: -webkit-box;
+                            -webkit-line-clamp: 5;
+                            line-clamp: 5;
+                            -webkit-box-orient: vertical;  
+                            overflow: hidden;
                             font-size: var(--spotify-font-xs);
                             color: var(--spotify-white-text);
                             
-                        }
-
+                        }   
+                        &-description--short{                                     
+                            -webkit-line-clamp: 4;
+                            line-clamp: 4;
+                        }                        
                         &-title{                            
                             display: flex;
                             flex-direction: row-reverse;
@@ -490,8 +777,7 @@ body{
                         }                        
                     }
                     
-                    &--list{
-                        border-top: solid .18rem var(--spotify-gray-card-active);
+                    &--list{                        
                         background: transparent;
                         transition: background .2s;
                         .spotify-main-music__play-card-content-small, .spotify-main-music__play-card-content-description{
@@ -499,20 +785,57 @@ body{
                             color: var(--spotify-white-text);
                             
                         }
+                        
                         &:hover{
                             background: var(--spotify-gray-card-active);
+                            border-color: var(--spotify-gray-card);
+                            border-bottom-width:.9rem;
+                            border-left-width:.9rem;
+                            border-right-width: .1rem;
+                            border-top-width:.2rem ;
+                            border-top-style: solid;
+                            border-bottom-style: solid;
+                            border-right-style: solid;
+                            border-left-style: solid;
                         }
                     }
-                }
+
+                    &--solid{
+                        background: transparent;                                      
+                    }
+                }               
             }
 
             &__about{
                 min-width: 20rem;
                 &-title{
-                    background: linear-gradient(to left, var(--spotify-white-text) -10%,var(--spotify-gray-card-active) 60%,var(--spotify-gray-card));
+                    width: fit-content;
+                    background: var(--bs-white);
+
+                }
+                &-see{
+                    text-decoration: none;
+                    color: var(--bs-white);
+                    text-transform: capitalize;
+                    &:hover{
+                        color: var(--bs-primary);
+                    }
+                    &:target{
+                        opacity: 0;
+                    }
                 }
                 &-description{
+                    margin-bottom: .2rem;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 8;
+                    line-clamp: 8;
+                    -webkit-box-orient: vertical;  
+                    overflow: hidden;
+                    font-size: var(--spotify-font-xs);                    
                     color: var(--spotify-white-text);
+                    &:target{
+                        display:block;
+                    }
                 }
                 &-options{
                     list-style: none;
@@ -522,7 +845,7 @@ body{
                         width: fit-content;
                         background: var(--spotify-gray-card);
                         &-link{
-                            font-size: var(--spotify-font-md);
+                            font-size: calc(var(--spotify-font-MS) - .4rem);
                             text-decoration: none;
                         }
                         &:hover{
@@ -530,8 +853,8 @@ body{
                         }
                     }
                 }
-            }
-        }        
+            }            
+        }                
         //footer
         &-footer{
             &__categorias{
@@ -583,14 +906,54 @@ body{
     }
     &-footer{grid-area: footer}
     //aside
-    &-aside{        
+    &-aside{   
+
+        display: none;
         grid-area: aside;
         background:var(--bs-black);
+        width: 100vw;
+        &-close{
+            position: fixed;
+            top: 0;
+            right: 0;
+            font-size: var(--spotify-font-lg);
+            text-decoration: none;
+            background:var(--bs-white);
+            width:fit-content;
+            border-radius: 2rem 0 0 2rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: solid .5rem var(--bs-white);
+            z-index: 1600;
+            &:hover{
+                background: var(--spotify-white-text);
+            }
+        }
+        &:target{         
+            display: block;   
+            z-index: 1500;      
+            position: fixed;                               
+        }        
+        &::before{
+            content: "";
+            width: 100vw;
+            height: 100vh;
+            display: none;
+            z-index: -10;
+            background:var(--spotify-gray-main);
+            opacity: .8;
+            filter: blur(1rem);            
+            left: 0;
+            top: 0;
+        }
         &__container{
             position: sticky;
-        top: 0px;
-        height: 100vh;
-        z-index: 1000;
+            min-height: 40rem;
+            top: 0px;
+            height: 100vh;
+            z-index: 1000;
         }
         &__logo{
             display:block;
@@ -600,7 +963,9 @@ body{
                 height:3rem;
             }
         }
-        &__nav{            
+        &__nav{      
+            overflow-y: auto;
+            height: 75vh;
             &-main{
                 list-style: none;    
                 &-item{
@@ -615,6 +980,18 @@ body{
                 }            
             }
             &-options{
+                &--playlist{
+                    list-style: none;                    
+                    & .page-link{
+                        border-left: .2rem solid var(--bs-white) !important; 
+                        margin-block:.25rem ;                                            
+                    }
+                    & .active{
+                        background: var(--bs-white) !important;
+                        border: none;
+                        color: var(--bs-black) !important;
+                    }    
+                }
                 &-button{
                     text-decoration: none;
                     background: transparent;
@@ -637,9 +1014,9 @@ body{
                     }
                 }
             }
-            &-legal{
-                position: absolute;
-                bottom: 2rem;
+            &-legal{      
+                max-width: 18rem;  
+                margin-top: 5rem;
                 &-links{                    
                     &-item{
                         text-decoration: none;
@@ -658,7 +1035,7 @@ body{
                 }
             }
             
-        }        
+        }                
     }        
 }
 

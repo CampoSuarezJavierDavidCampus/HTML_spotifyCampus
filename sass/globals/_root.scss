@@ -38,6 +38,7 @@ $gray-main: #121212;
 $gray-text:#959595;
 $gray-card: #181818;
 $gray-card-active:#282828;
+$gray-card-semiwhite: hsla(0,0%,100%,.1);
 $gray-card-light:linear-gradient( transparent -10%,$gray-card-active 80%,$gray-card);
 
 $font-size:(
@@ -51,7 +52,7 @@ $card-img-size:(
     "xl":14.5rem,
     "lg":12rem,
     "md":9.25rem,
-    "sm":5rem,
+    "sm":7rem,
     "xs":2.5rem
 );
 
@@ -78,7 +79,8 @@ $arrayColors: (
     "white-text": hsla(0,0%,100%,.7),
     "gray-card":$gray-card,
     "gray-card-light":$gray-card-light,
-    "gray-card-active":$gray-card-active    
+    "gray-card-active":$gray-card-active,
+    "gray-card-semiwhite":$gray-card-semiwhite
 );
 
 @include varsCreate(spotify-font,$font-size);

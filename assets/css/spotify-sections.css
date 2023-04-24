@@ -45,13 +45,14 @@ FONT{
   --spotify-gray-card: #181818;
   --spotify-gray-card-light: linear-gradient(transparent -10%, #282828 80%, #181818);
   --spotify-gray-card-active: #282828;
+  --spotify-gray-card-semiwhite: hsla(0, 0%, 100%, 0.1);
 }
 
 :root {
   --spotify-card-img-xl: 14.5rem;
   --spotify-card-img-lg: 12rem;
   --spotify-card-img-md: 9.25rem;
-  --spotify-card-img-sm: 5rem;
+  --spotify-card-img-sm: 7rem;
   --spotify-card-img-xs: 2.5rem;
 }
 
@@ -104,6 +105,31 @@ body {
 .spotify-header .spotify-header-navbar__nav-list-item--link:hover .spotify-header-navbar__nav-list-link {
   color: var(--bs-white);
 }
+.spotify-header .spotify-header-navbar__nav-list-item--user-icon {
+  height: 2rem;
+  width: 2rem;
+}
+.spotify-header .spotify-header-navbar__nav-list-item--user-button {
+  border: none;
+  background: transparent;
+  color: var(--spotify-white-text);
+  display: flex;
+  align-items: center;
+}
+.spotify-header .spotify-header-navbar__nav-list-item--user-button::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: 0.4rem solid transparent;
+  border-top: 0.7rem solid var(--bs-white);
+  border-left: 0.4rem solid transparent;
+  -webkit-margin-start: 0.1rem;
+          margin-inline-start: 0.1rem;
+}
+.spotify-header .spotify-header-navbar__nav-list-item--user-button:hover {
+  color: var(--bs-white);
+  text-decoration: underline;
+}
 .spotify-header .spotify-header-navbar__nav-list-link {
   text-decoration: none;
   color: var(--spotify-gray-text);
@@ -119,31 +145,43 @@ body {
 .spotify-header .spotify-header-navbar__form-input-group-form-control:focus {
   box-shadow: 0 0 0 0 #000;
 }
+.spotify-header .spotify-header-navbar__navegation-pagination .active {
+  background: var(--bs-white) !important;
+  color: var(--bs-black) !important;
+}
 .spotify-main {
   grid-area: main;
   background: var(--spotify-gray-main);
 }
-.spotify-main-post-office {
+.spotify-main-post-office--expand {
+  display: flex;
+  flex-wrap: wrap;
+}
+.spotify-main-post-office--fit {
   display: grid;
   align-items: end;
   justify-items: center;
   overflow-y: hidden;
   grid-template-columns: repeat(auto-fit, minmax(10.2rem, 12rem));
-}
-.spotify-main-post-office--fit {
   -moz-column-gap: 1rem;
        column-gap: 1rem;
   grid-template-rows: var(--spotify-card-height-xxl);
   grid-auto-rows: 0px;
 }
 .spotify-main-post-office__card {
+  display: block;
   overflow-x: hidden;
   overflow-y: hidden;
   position: relative;
   max-width: 12.5rem;
-  width: 100%;
+  min-width: 12.5rem;
+}
+.spotify-main-post-office__card--expand {
+  height: 12rem;
+  max-width: 100%;
 }
 .spotify-main-post-office__card--fit {
+  width: 100%;
   background: var(--spotify-gray-card);
   display: flex;
   align-items: center;
@@ -156,6 +194,9 @@ body {
 .spotify-main-post-office__card--fit:hover figure figcaption, .spotify-main-post-office__card--fit:active figure figcaption {
   opacity: 1;
   bottom: 0.4rem;
+}
+.spotify-main-post-office__card--lg {
+  max-width: 100%;
 }
 .spotify-main-post-office__card-figure {
   overflow-y: hidden;
@@ -177,7 +218,16 @@ body {
 .spotify-main-post-office__card-figure-caption:hover, .spotify-main-post-office__card-figure-caption:active {
   transform: scale(1.1);
 }
+.spotify-main-post-office__card-figure-caption--lg {
+  right: 2rem;
+  bottom: -3.2rem;
+}
+.spotify-main-post-office__card-figure--lg {
+  height: 10rem;
+}
 .spotify-main-post-office__card-img-small {
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 6.25rem;
   width: 6.25rem;
   position: absolute;
@@ -186,15 +236,131 @@ body {
   transform: rotate(25deg);
 }
 .spotify-main-post-office__card-img-fit {
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 9.25rem;
   width: 9.25rem;
 }
 .spotify-main-post-office__card-img-fit--shadow {
   box-shadow: 0 0 0.9rem 0.2rem rgba(0, 0, 0, 0.8);
 }
+.spotify-main-post-office__card-img-default {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--spotify-font-lg) + 5rem);
+  color: var(--spotify-white-text);
+}
+.spotify-main-post-office__card-body-title, .spotify-main-post-office__card-body-author {
+  display: inline-block;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.spotify-main-post-office__card-body-title--expand {
+  display: inline-block;
+  overflow: visible;
+}
+.spotify-main-post-office__card-body-title--lg {
+  font-size: calc(var(--spotify-font-lg) + 1rem) !important;
+}
 .spotify-main-post-office__card-body-author {
   font-size: 1rem;
   color: var(--spotify-gray-text);
+}
+.spotify-main-post-office__card-body-author--lg {
+  font-size: calc(var(--spotify-font-md) + 0.2rem) !important;
+}
+.spotify-main-post-office__card-body--lg {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+.spotify-main-iframe {
+  margin-bottom: 0.5rem;
+  position: relative;
+  width: 75%;
+  max-width: 60rem;
+  height: 7rem;
+  min-width: 16.3rem;
+  background: transparent;
+  border-radius: 1rem;
+  overflow-y: hidden;
+  z-index: 2;
+}
+.spotify-main-iframe::after {
+  content: "";
+  z-index: -100;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* background: var(--spotify-gray-main); */
+}
+.spotify-main-iframe:hover {
+  border-color: var(--spotify-gray-card);
+  border-bottom-width: 0.9rem;
+  border-left-width: 0.9rem;
+  border-right-width: 0.1rem;
+  border-top-width: 0.2rem;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-right-style: solid;
+  border-left-style: solid;
+}
+.spotify-main-iframe iframe {
+  position: relative;
+}
+.spotify-main-section__music {
+  position: fixed;
+  z-index: 2000;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  background: transparent;
+  -webkit-backdrop-filter: blur(3rem);
+          backdrop-filter: blur(3rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+.spotify-main-section__music:target {
+  visibility: visible;
+  opacity: 1;
+}
+.spotify-main-section__music-container {
+  width: 80vw;
+  height: 60vh;
+  background: var(--spotify-gray-card-semiwhite);
+  border-radius: 1rem;
+  box-shadow: 0 1.5rem 2rem 0.6rem #121212;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 3rem;
+  order: 10;
+}
+.spotify-main-section__music-close {
+  font-size: var(--spotify-font-md);
+  text-decoration: none;
+  top: 0px;
+  color: var(--spotify-white-text);
+  margin-bottom: 2rem;
+}
+.spotify-main-section__music-close:hover, .spotify-main-section__music-close:active {
+  color: var(--bs-white);
+  text-decoration: underline;
 }
 .spotify-main-section-title {
   display: flex;
@@ -227,10 +393,53 @@ body {
   z-index: 200;
   background: transparent;
 }
+.spotify-main-header__description--solid {
+  transition: transform 0.5s;
+}
+.spotify-main-header__description--solid:hover {
+  border-bottom-width: 0.9rem;
+  border-left-width: 0.9rem;
+  border-right-width: 0.1rem;
+  border-top-width: 0.2rem;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-right-style: solid;
+  border-left-style: solid;
+}
 .spotify-main-header__img {
   height: var(--spotify-card-img-xl);
   width: var(--spotify-card-img-xl);
   box-shadow: 0 0 0.9rem 0.2rem rgba(0, 0, 0, 0.8);
+}
+.spotify-main-header__img--default {
+  background: var(--spotify-gray-text);
+  font-size: calc(var(--spotify-font-lg) + 5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.spotify-main-header__img--default-love {
+  font-size: calc(var(--spotify-font-lg) + 9rem);
+  background: linear-gradient(135deg, #450af5, #c4efd9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bs-white);
+}
+.spotify-main-header__img--default .fa-pencil {
+  display: none;
+}
+.spotify-main-header__img--default .fa-pencil::after {
+  content: "Choose photo";
+  display: block;
+  font-size: calc(var(--spotify-font-xs) + 0.4rem);
+}
+.spotify-main-header__img--default:hover .fa-music {
+  display: none;
+}
+.spotify-main-header__img--default:hover .fa-pencil {
+  display: block;
 }
 .spotify-main-header__title-categoria, .spotify-main-header__title-studio {
   font-size: var(--spotify-font-xs);
@@ -334,9 +543,36 @@ body {
   border: none;
   position: absolute;
 }
+.spotify-main-header__controls-search-close {
+  color: var(--spotify-white-text);
+}
+.spotify-main-header__controls-search-close:hover {
+  color: var(--bs-white);
+}
+.spotify-main-header__controls-search-label {
+  background: var(--spotify-gray-card-semiwhite);
+}
+.spotify-main-header__controls-search-label-input, .spotify-main-header__controls-search-label-text {
+  color: var(--spotify-white-text);
+  background: transparent;
+  font-size: calc(var(--spotify-font-xs) + 0.8rem);
+}
+.spotify-main-header__controls-search-label-input {
+  transition: background 0.3s;
+}
+.spotify-main-header__controls-search-label-input:focus {
+  background: var(--spotify-gray-card-active);
+  box-shadow: 0 0 0 0 #000;
+  color: var(--bs-white);
+}
+.spotify-main-header__controls-search-label-input:focus::-moz-placeholder {
+  color: var(--bs-white);
+}
+.spotify-main-header__controls-search-label-input:focus::placeholder {
+  color: var(--bs-white);
+}
 .spotify-main-header__description {
   background: var(--spotify-gray-card-light);
-  border-bottom: solid 0.4rem var(--spotify-gray-main);
 }
 .spotify-main-header__description-nav-item {
   position: relative;
@@ -386,6 +622,29 @@ body {
 .spotify-main-header__description-options-button-link {
   text-decoration: none;
 }
+.spotify-main-music-liked {
+  height: 40rem;
+  -webkit-backdrop-filter: blur(4rem);
+          backdrop-filter: blur(4rem);
+  box-shadow: 0.3rem 0.7rem 0.9rem 0.2rem rgba(0, 0, 0, 0.8);
+}
+.spotify-main-music-liked-description-button {
+  text-decoration: none;
+  background: white;
+  height: 5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  margin-inline: auto;
+  color: var(--bs-black);
+  transition: background 0.25s, transform 0.4s;
+}
+.spotify-main-music-liked-description-button:hover {
+  transform: scale(1.06);
+  background: var(--spotify-gray-card-semiwhite);
+  color: var(--bs-white);
+}
 .spotify-main-music__play-card {
   background: var(--spotify-gray-card-light);
   display: flex;
@@ -395,16 +654,29 @@ body {
   transform: scale(1);
 }
 .spotify-main-music__play-card-content-img {
-  height: var(--spotify-card-img-md);
-  width: var(--spotify-card-img-md);
+  height: var(--spotify-card-img-sm);
+  width: var(--spotify-card-img-sm);
+}
+.spotify-main-music__play-card-content-img--lg {
+  height: calc(var(--spotify-card-img-md) + 0.99rem);
+  width: var(--spotify-card-img-lg);
 }
 .spotify-main-music__play-card-content-picture {
   width: -moz-fit-content;
   width: fit-content;
 }
 .spotify-main-music__play-card-content-small, .spotify-main-music__play-card-content-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   font-size: var(--spotify-font-xs);
   color: var(--spotify-white-text);
+}
+.spotify-main-music__play-card-content-description--short {
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
 }
 .spotify-main-music__play-card-content-title {
   display: flex;
@@ -466,7 +738,6 @@ body {
   box-shadow: 0 0 0.8rem 0.4rem rgba(24, 24, 24, 0.6);
 }
 .spotify-main-music__play-card--list {
-  border-top: solid 0.18rem var(--spotify-gray-card-active);
   background: transparent;
   transition: background 0.2s;
 }
@@ -476,15 +747,50 @@ body {
 }
 .spotify-main-music__play-card--list:hover {
   background: var(--spotify-gray-card-active);
+  border-color: var(--spotify-gray-card);
+  border-bottom-width: 0.9rem;
+  border-left-width: 0.9rem;
+  border-right-width: 0.1rem;
+  border-top-width: 0.2rem;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-right-style: solid;
+  border-left-style: solid;
+}
+.spotify-main-music__play-card--solid {
+  background: transparent;
 }
 .spotify-main-music__about {
   min-width: 20rem;
 }
 .spotify-main-music__about-title {
-  background: linear-gradient(to left, var(--spotify-white-text) -10%, var(--spotify-gray-card-active) 60%, var(--spotify-gray-card));
+  width: -moz-fit-content;
+  width: fit-content;
+  background: var(--bs-white);
+}
+.spotify-main-music__about-see {
+  text-decoration: none;
+  color: var(--bs-white);
+  text-transform: capitalize;
+}
+.spotify-main-music__about-see:hover {
+  color: var(--bs-primary);
+}
+.spotify-main-music__about-see:target {
+  opacity: 0;
 }
 .spotify-main-music__about-description {
+  margin-bottom: 0.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: var(--spotify-font-xs);
   color: var(--spotify-white-text);
+}
+.spotify-main-music__about-description:target {
+  display: block;
 }
 .spotify-main-music__about-options {
   list-style: none;
@@ -497,7 +803,7 @@ body {
   background: var(--spotify-gray-card);
 }
 .spotify-main-music__about-options-button-link {
-  font-size: var(--spotify-font-md);
+  font-size: calc(var(--spotify-font-MS) - 0.4rem);
   text-decoration: none;
 }
 .spotify-main-music__about-options-button:hover {
@@ -546,11 +852,51 @@ body {
   grid-area: footer;
 }
 .spotify-aside {
+  display: none;
   grid-area: aside;
   background: var(--bs-black);
+  width: 100vw;
+}
+.spotify-aside-close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-size: var(--spotify-font-lg);
+  text-decoration: none;
+  background: var(--bs-white);
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 2rem 0 0 2rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: solid 0.5rem var(--bs-white);
+  z-index: 1600;
+}
+.spotify-aside-close:hover {
+  background: var(--spotify-white-text);
+}
+.spotify-aside:target {
+  display: block;
+  z-index: 1500;
+  position: fixed;
+}
+.spotify-aside::before {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  z-index: -10;
+  background: var(--spotify-gray-main);
+  opacity: 0.8;
+  filter: blur(1rem);
+  left: 0;
+  top: 0;
 }
 .spotify-aside__container {
   position: sticky;
+  min-height: 40rem;
   top: 0px;
   height: 100vh;
   z-index: 1000;
@@ -564,6 +910,10 @@ body {
 .spotify-aside__logo svg {
   height: 3rem;
 }
+.spotify-aside__nav {
+  overflow-y: auto;
+  height: 75vh;
+}
 .spotify-aside__nav-main {
   list-style: none;
 }
@@ -573,6 +923,18 @@ body {
 }
 .spotify-aside__nav-main-item:hover .spotify-aside-nav-main-item-link, .spotify-aside__nav-main-item .active {
   color: var(--bs-white);
+}
+.spotify-aside__nav-options--playlist {
+  list-style: none;
+}
+.spotify-aside__nav-options--playlist .page-link {
+  border-left: 0.2rem solid var(--bs-white) !important;
+  margin-block: 0.25rem;
+}
+.spotify-aside__nav-options--playlist .active {
+  background: var(--bs-white) !important;
+  border: none;
+  color: var(--bs-black) !important;
 }
 .spotify-aside__nav-options-button {
   text-decoration: none;
@@ -596,8 +958,8 @@ body {
   background: linear-gradient(135deg, #450af5, #c4efd9);
 }
 .spotify-aside__nav-legal {
-  position: absolute;
-  bottom: 2rem;
+  max-width: 18rem;
+  margin-top: 5rem;
 }
 .spotify-aside__nav-legal-links-item {
   text-decoration: none;
@@ -638,6 +1000,24 @@ grid-breakpoints:
   xl: 1200px,
   xxl: 1400px
 */
+@media (min-width: 768px) {
+  #spotifyAsideHeader {
+    width: auto;
+  }
+  #spotifyAsideHeader:target {
+    position: sticky;
+  }
+  #spotifyAsideHeader:target::before {
+    display: block;
+    position: fixed;
+  }
+}
+@media (min-width: 992px) {
+  #spotifyAsideHeader {
+    width: auto;
+    display: block;
+  }
+}
 /*=====  End of medias  ======*/
 /*=============================================
 =            HEADER            =
@@ -690,32 +1070,3 @@ grid-breakpoints:
 =            MAIN TOP            =
 =============================================*/
 /*=====  End of MAIN TOP  ======*//*# sourceMappingURL=spotify-sections.css.map */
-/*=====  Footer =====*/
-.pie{
-    text-align: left;
-    background-image: linear-gradient(90deg,#af2896,#509bf5);
-    color: white;
-    width: 100%;
-    height: 90px;
-    border-width: 0px;
-
-    
-}
-.registrate{
-    border-radius: 50px;
-    background-color: white;
-    color: black;
-    height: 50px;
-    position: absolute;
-    right: 0%;
-    display: inline;
-    bottom: 25%;
-}
-.ejemplo{
-    width: 400px;
-}
-footer{
-    position: relative;
-    top: -100%;
-}
-/*===== End of Footer =====*/
