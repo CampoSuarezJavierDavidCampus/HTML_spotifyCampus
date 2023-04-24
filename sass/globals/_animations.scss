@@ -1,0 +1,13 @@
+@use 'mixins' as *;
+
+
+/*----------  ANIMATIONS  ----------*/
+
+@keyframes corazon{
+    0%{
+        font-size: 3rem;     
+    }
+    100%{
+        font-size: 4rem;
+    }
+}

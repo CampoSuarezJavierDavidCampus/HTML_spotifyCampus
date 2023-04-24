@@ -1,0 +1,37 @@
+@use 'mixins' as *;
+
+/*=============================================
+=            medias                           =
+=============================================*/
+
+/**
+grid-breakpoints:
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+*/
+@media (min-width: 768px) {
+  #spotifyAsideHeader{
+    width: auto;
+    &:target{
+      position: sticky;
+    }
+    &:target::before{
+      display: block;
+      position: fixed;
+  }
+  }
+}
+@media (min-width: 992px) {
+  #spotifyAsideHeader{
+    width: auto;
+    display: block;    
+  }
+}
+
+
+/*=====  End of medias  ======*/
+

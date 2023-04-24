@@ -1,0 +1,89 @@
+@use 'mixins' as *;
+
+
+/*----------  CARDS   ----------*/
+/* 
+IMG{
+    altura x ancho
+    -xxl:   13rem
+    -xl:    12.rem
+    -lg:    10.9rem
+    -md:    8rem
+    -sm:    4rem   
+    -xs:    2.5rem
+}
+
+CARDS{
+    altura    
+    -xxl:    18.625rem
+    -xl:    15.2rem
+    -lg:    10.75rem
+    -md:    7.8rem
+    -sm:    5.5rem
+    -xs:    3.5rem
+    anchura
+    -xxl:    100%
+    -xl:    
+    -lg:    10.75rem
+    -md:    7.8rem
+    -sm:    5.5rem
+    -xs:    3.5rem
+FONT{
+    -xl:    clamp(3rem, calc(4rem + 3vw), 8rem)
+    -sm:    clamp(.85rem, calc(.8rem + 1vw), 1.5rem)
+}
+*/
+
+$gray-main: #121212;
+$gray-text:#959595;
+$gray-card: #181818;
+$gray-card-active:#282828;
+$gray-card-semiwhite: hsla(0,0%,100%,.1);
+$gray-card-light:linear-gradient( transparent -10%,$gray-card-active 80%,$gray-card);
+
+$font-size:(
+    "xl":clamp(2rem, calc(3rem + 3vw), 8rem),    
+    "lg":clamp(1.5rem, calc(1.5rem + 1vw), 3rem),
+    "md":clamp(0.95rem, calc(0.95rem + 1vw), 2rem),
+    "xs":clamp(.7rem, calc(.7rem + 1vw), 1rem)
+);
+
+$card-img-size:(
+    "xl":14.5rem,
+    "lg":12rem,
+    "md":9.25rem,
+    "sm":7rem,
+    "xs":2.5rem
+);
+
+$card-height-size:(
+    "xxl":    18.625rem,
+    "xl":    15.2rem,
+    "lg":    10.75rem,
+    "md":    7.8rem,
+    "sm":    5.5rem,
+    "xs":    3.5rem
+);
+$card-height-size:(
+    "xxl":    18.625rem,
+    "xl":    15.2rem,
+    "lg":    10.75rem,
+    "md":    7.8rem,
+    "sm":    5.5rem,
+    "xs":    3.5rem
+);
+
+$arrayColors: (    
+    "gray-main":$gray-main,
+    "gray-text":$gray-text,
+    "white-text": hsla(0,0%,100%,.7),
+    "gray-card":$gray-card,
+    "gray-card-light":$gray-card-light,
+    "gray-card-active":$gray-card-active,
+    "gray-card-semiwhite":$gray-card-semiwhite
+);
+
+@include varsCreate(spotify-font,$font-size);
+@include varsCreate(spotify,$arrayColors);
+@include varsCreate(spotify-card-img,$card-img-size);
+@include varsCreate(spotify-card-height,$card-height-size);
